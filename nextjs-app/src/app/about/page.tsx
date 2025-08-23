@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function AboutPage() {
-  const { language, t } = useLanguage();
+  const { language } = useLanguage();
   const [mounted, setMounted] = useState(false);
   
   useEffect(() => {

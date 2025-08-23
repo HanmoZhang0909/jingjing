@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { notFound } from 'next/navigation';
 
 // 案例数据（实际应用中可以从API或数据库获取）
@@ -244,8 +243,9 @@ const cases = [
   }
 ];
 
-export default function CaseDetail({ params }: { params: { slug: string } }) {
-  const caseItem = cases.find(c => c.slug === params.slug);
+export default async function CaseDetail({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const caseItem = cases.find(c => c.slug === slug);
   
   if (!caseItem) {
     notFound();

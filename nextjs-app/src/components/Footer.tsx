@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Footer() {
-  const { t, language } = useLanguage();
+  const { language } = useLanguage();
 
   // 新闻数据
   const newsItems = [
