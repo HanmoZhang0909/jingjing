@@ -15,11 +15,11 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/70 to-transparent z-10"></div>
         <div className="absolute inset-0 flex items-center z-20">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold text-white mb-4">东莞晶品表面技术公司</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">东莞晶晶表面技术有限公司</h2>
             <p className="text-white text-lg max-w-2xl mb-6">
-              ST-930晶面处理技术全球领先的电镀行业品质保障典范之一。效率高，性能稳定，口碑佳，已在电子，
-              电镀市场得到认可，电路加工设备，PCB制作，汽车，配件，电镀电器医疗仪器，家电等
-              各领域广泛应用。提高了电镀产品的质量和综合性能，打破西方ST-930表面处理的钿控技术垄断，
+              成立于2004年，专注于金属表面处理行业的领先企业。我们专注于镀铬技术研发、化工产品生产销售、
+              镀铬设备及配件制造。开发了新型高效的微裂纹硬铬催化剂中间体DX-30（产品编号ST-930），
+              在节能环保方面具有突出优势，广泛应用于电子、汽车、家电、医疗仪器等各领域。
             </p>
             <div className="flex space-x-4">
               <Link href="/about" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full">
@@ -57,7 +57,7 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-yellow-500 mb-2">先进工艺</h3>
-              <p className="text-gray-600">工艺技术不断优化升级，产品质量稳定</p>
+              <p className="text-gray-600">采用大吨位挤压设备，从传统铸造工艺转向挤压成型工艺，大幅提升导电性和使用寿命</p>
             </div>
             
             <div className="flex flex-col items-center text-center">
@@ -67,7 +67,7 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-yellow-500 mb-2">品控流程</h3>
-              <p className="text-gray-600">严谨的品控流程与环保标准，国际一流水准的产品</p>
+              <p className="text-gray-600">配备多名高级工程师和各种检测仪器，确保电镀溶液分析准确和镀铬阳极产品质量</p>
             </div>
             
             <div className="flex flex-col items-center text-center">
@@ -77,7 +77,7 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-yellow-500 mb-2">专业服务</h3>
-              <p className="text-gray-600">结构化的服务流程体系，客户为先的产品人性化的服务</p>
+              <p className="text-gray-600">独立开发镀铬溶液中金属残渣净化技术，实现溶液永久重复使用，大幅降低原材料成本</p>
             </div>
           </div>
         </div>
@@ -94,7 +94,7 @@ export default function Home() {
               <h2 className="text-3xl font-bold mb-2">公司简介</h2>
               <p className="text-red-600 mb-6">Company Profile</p>
               <p className="text-gray-700 mb-6">
-                东莞晶品表面技术有限公司成立于2004年，我们专注于各类金属表面处理行业，专注于表面技术的研发和化工产品（高效镀层设备与添加剂）的制造。经过多年的努力研发，基于东莞晶品新材料有限公司强大的质量保障体系的支持，我们的产品获得了国内和国外很多客户的认可，给客户带来了良好的增值与减少的下降，并且环保稳定的体验增加了信赖。
+                东莞晶晶表面技术有限公司成立于2004年，专注于金属表面处理行业的领先企业。我们专注于镀铬技术研发、化工产品生产销售、镀铬设备及配件制造。开发了新型高效的微裂纹硬铬催化剂中间体DX-30（产品编号ST-930），在节能环保方面具有突出优势。2021年成立金属材料制造部（东莞晶晶新材料有限公司），专业制造镀铬阳极，采用大吨位挤压设备，从传统铸造工艺转向挤压成型工艺，大幅提升导电性和使用寿命。
               </p>
               <Link href="/about" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full inline-block">
                 查看更多
@@ -111,16 +111,16 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                title: "中国镀铜电镀项目在河南开展科研实验",
-                date: "15/10/2018",
+                title: "东莞晶晶表面技术有限公司成功开发DX-30微裂纹硬铬催化剂",
+                date: "15/11/2023",
               },
               {
-                title: "提高铜表面硬度方法的优化研究",
-                date: "23/04/2018",
+                title: "我司独立开发镀铬溶液金属残渣净化技术获得重大突破",
+                date: "28/10/2023",
               },
               {
-                title: "镀铬镀铂的区别与各自性能优势分析",
-                date: "23/04/2018",
+                title: "金属表面处理行业环保技术发展白皮书发布",
+                date: "20/09/2023",
               }
             ].map((news, index) => (
               <div key={index} className="border rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">

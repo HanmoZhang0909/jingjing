@@ -36,9 +36,9 @@ export default function Navbar() {
               <div className="flex-shrink-0">
                 <div className="flex items-center">
                   <div className="w-8 h-8 bg-white text-blue-900 flex items-center justify-center rounded-sm font-bold mr-2">
-                    JP
+                    JJ
                   </div>
-                  <span className="text-lg font-bold">公司名称</span>
+                  <span className="text-lg font-bold">东莞晶晶表面技术有限公司</span>
                 </div>
               </div>
             </div>

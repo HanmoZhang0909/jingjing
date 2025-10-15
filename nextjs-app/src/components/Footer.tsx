@@ -10,24 +10,24 @@ export default function Footer() {
   const newsItems = [
     {
       id: 1,
-      titleZh: '深圳新能源产业创新发展论坛成功举办',
-      titleEn: 'Shenzhen New Energy Industry Innovation Forum Successfully Held',
+      titleZh: '东莞晶晶表面技术有限公司成功开发DX-30微裂纹硬铬催化剂',
+      titleEn: 'Dongguan Jingjing Surface Technology Successfully Develops DX-30 Micro Crack Hard Chromium Catalyst',
       date: '2023-11-15',
-      slug: 'shenzhen-new-energy-forum'
+      slug: 'dx-30-micro-crack-catalyst'
     },
     {
       id: 2,
-      titleZh: '我司成功研发新型太阳能电池技术',
-      titleEn: 'Our Company Successfully Develops New Solar Cell Technology',
+      titleZh: '我司独立开发镀铬溶液金属残渣净化技术获得重大突破',
+      titleEn: 'Our Company Achieves Major Breakthrough in Independent Development of Chromium Plating Solution Metal Residue Purification Technology',
       date: '2023-10-28',
-      slug: 'new-solar-cell-technology'
+      slug: 'chromium-solution-purification-technology'
     },
     {
       id: 3,
-      titleZh: '能源行业数字化转型白皮书发布',
-      titleEn: 'Energy Industry Digital Transformation White Paper Released',
+      titleZh: '金属表面处理行业环保技术发展白皮书发布',
+      titleEn: 'White Paper on Environmental Technology Development in Metal Surface Treatment Industry Released',
       date: '2023-09-20',
-      slug: 'energy-digital-transformation-whitepaper'
+      slug: 'metal-surface-treatment-environmental-technology-whitepaper'
     }
   ];
 
@@ -55,8 +55,8 @@ export default function Footer() {
       en: 'Address: '
     },
     addressValue: {
-      zh: '广东省深圳市南山区科技园高新南四道W1-A栋2层',
-      en: 'Floor 2, Building W1-A, Hi-Tech South 4th Road, Science Park, Nanshan District, Shenzhen, Guangdong Province, China'
+      zh: '广东省东莞市石碣镇科技中路64号昌盛工业园',
+      en: 'Changsheng Industrial Park, No. 64, Science and Technology Middle Road, Shijie Town, Dongguan City, Guangdong Province, China'
     },
     phone: {
       zh: '联系电话：',
@@ -95,8 +95,8 @@ export default function Footer() {
       en: 'Send'
     },
     copyright: {
-      zh: '© ' + new Date().getFullYear() + ' 公司名称 版权所有',
-      en: '© ' + new Date().getFullYear() + ' Company Name. All Rights Reserved.'
+      zh: '© ' + new Date().getFullYear() + ' 东莞晶晶表面技术有限公司 版权所有',
+      en: '© ' + new Date().getFullYear() + ' Dongguan Jingjing Surface Technology Co., Ltd. All Rights Reserved.'
     }
   };
 
@@ -127,7 +127,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start">
                 <span className="font-semibold mr-2">{footerTranslations.phone[language]}</span>
-                <span>0755-1234-5678</span>
+                <span>0769-8888-8888</span>
               </li>
               <li className="flex items-start">
                 <span className="font-semibold mr-2">{footerTranslations.usOffice[language]}</span>
@@ -139,7 +139,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start">
                 <span className="font-semibold mr-2">{footerTranslations.email[language]}</span>
-                <span>contact@company.com</span>
+                <span>contact@jingjing-surface.com</span>
               </li>
             </ul>
           </div>

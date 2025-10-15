@@ -23,8 +23,8 @@ export default function AboutPage() {
       en: 'ABOUT US'
     },
     intro: {
-      zh: '东莞晶品表面技术有限公司成立于2004年，我们专注于各类金属表面处理行业，专注于表面技术的研发和化工产品（高效镀层设备与添加剂）的制造。经过多年的努力研发，基于东莞晶品新材料有限公司强大的质量保障体系的支持，我们的产品获得了国内和国外很多客户的认可，给客户带来了良好的增值与减少的下降，并且环保稳定的体验增加了信赖。',
-      en: 'Dongguan Jingpin Surface Technology Co., Ltd. was established in 2004. We focus on various metal surface treatment industries, specializing in the research and development of surface technology and the manufacturing of chemical products (efficient plating equipment and additives). After years of research and development efforts, based on the strong quality assurance system of Dongguan Jingpin New Materials Co., Ltd., our products have been recognized by many domestic and foreign customers, bringing good value addition and reduced costs, and the environmentally friendly and stable experience has increased trust.'
+      zh: '东莞晶晶表面技术有限公司成立于2004年，专注于金属表面处理行业的领先企业。我们专注于镀铬技术研发、化工产品生产销售、镀铬设备及配件制造。开发了新型高效的微裂纹硬铬催化剂中间体DX-30（产品编号ST-930），在节能环保方面具有突出优势。2021年成立金属材料制造部（东莞晶晶新材料有限公司），专业制造镀铬阳极，采用大吨位挤压设备，从传统铸造工艺转向挤压成型工艺，大幅提升导电性和使用寿命。',
+      en: 'Dongguan Jingjing Surface Technology Co., Ltd. was established in 2004. It is a leading enterprise specializing in the metal surface treatment industry, focusing on the research and development of chrome plating technology, the production and sales of chemical products, chrome plating equipment and accessories. We have developed a new and more effective micro crack hard chromium catalyst intermediate DX-30, which is a high-purity product and named as product number ST-930. In 2021, we established the Metal Materials Manufacturing Department (Dongguan Jingjing New Materials Co., Ltd.), specializing in the manufacturing of anodes for chrome plating. On the basis of traditional casting and drawing forming technologies, we introduced large tonnage extrusion equipment, which changed from years of casting process to extrusion forming process, greatly improving the conductivity and service life of chrome plating anodes.'
     },
     history: {
       title: {
@@ -36,39 +36,39 @@ export default function AboutPage() {
         en: 'OUR HISTORY'
       },
       content: {
-        zh: '公司成立至今，我们一直坚持"科技创新、品质为先"的企业宗旨。通过不断研发创新，提高产品品质和服务水平，我们已成为行业内具有影响力的企业之一。未来，我们将继续致力于表面处理技术的研发和应用，为客户提供更优质的产品和服务。',
-        en: 'Since the establishment of the company, we have always adhered to the corporate mission of "technological innovation and quality first." Through continuous research and innovation, improving product quality and service levels, we have become one of the influential enterprises in the industry. In the future, we will continue to focus on the research and application of surface treatment technology, providing customers with better products and services.'
+        zh: '公司成立至今，我们一直坚持"专业、更专业、最专业"的企业使命。通过不断研发创新，我们独立开发了镀铬溶液中金属残渣净化技术，使溶液能够永久重复使用，而不是每3-5年更换一次。这大大降低了镀铬企业的原材料成本和化学品对环境造成的损害。我们配备多名高级工程师和各种检测仪器，确保电镀溶液分析准确和镀铬阳极产品质量。',
+        en: 'Since the establishment of the company, we have always adhered to the corporate mission of "professional, more professional, and the most professional." Through continuous research and innovation, we have independently developed another breakthrough technology, which is the purification of metal residues in chromium plating solutions, allowing the solution to be reused forever instead of being replaced every 3-5 years. It greatly reduces the raw material costs of chrome plating enterprises and the environmental damage caused by chemicals. We are equipped with multiple senior engineers and various testing instruments to ensure accurate analysis of electroplating solutions and high-quality anode products for chrome plating.'
       },
       milestones: [
         {
           year: '2004',
-          eventZh: '公司成立，专注于表面处理技术研发',
-          eventEn: 'Company established, focusing on surface treatment technology R&D'
+          eventZh: '东莞晶晶表面技术有限公司成立，专注于金属表面处理行业',
+          eventEn: 'Dongguan Jingjing Surface Technology Co., Ltd. established, focusing on metal surface treatment industry'
         },
         {
           year: '2008',
-          eventZh: '成功研发ST-930系列产品，打破国外技术垄断',
-          eventEn: 'Successfully developed ST-930 series products, breaking foreign technology monopoly'
+          eventZh: '成功开发微裂纹硬铬催化剂中间体DX-30（产品编号ST-930）',
+          eventEn: 'Successfully developed micro crack hard chromium catalyst intermediate DX-30 (Product No. ST-930)'
         },
         {
           year: '2012',
-          eventZh: '通过ISO9001质量管理体系认证',
-          eventEn: 'Passed ISO9001 quality management system certification'
+          eventZh: '产品获得国内外客户广泛认可，建立完善的质量保障体系',
+          eventEn: 'Products widely recognized by domestic and foreign customers, established comprehensive quality assurance system'
         },
         {
           year: '2016',
-          eventZh: '设立美国分公司，产品出口至全球20多个国家和地区',
-          eventEn: 'Established a branch in the United States, exporting products to more than 20 countries and regions worldwide'
+          eventZh: '业务扩展至全球市场，产品出口多个国家和地区',
+          eventEn: 'Business expanded to global markets, products exported to multiple countries and regions'
         },
         {
-          year: '2020',
-          eventZh: '成功研发环保型表面处理剂，获得多项发明专利',
-          eventEn: 'Successfully developed environmentally friendly surface treatment agents, obtaining multiple invention patents'
+          year: '2021',
+          eventZh: '成立金属材料制造部（东莞晶晶新材料有限公司），专业制造镀铬阳极',
+          eventEn: 'Established Metal Materials Manufacturing Department (Dongguan Jingjing New Materials Co., Ltd.), specializing in chrome plating anode manufacturing'
         },
         {
           year: '2023',
-          eventZh: '新工厂投产，年产能提升50%',
-          eventEn: 'New factory put into production, annual capacity increased by 50%'
+          eventZh: '独立开发镀铬溶液金属残渣净化技术，实现溶液永久重复使用',
+          eventEn: 'Independently developed chromium plating solution metal residue purification technology, achieving permanent solution reuse'
         }
       ]
     },
@@ -82,8 +82,8 @@ export default function AboutPage() {
         en: 'MEET OUR TEAM'
       },
       description: {
-        zh: '我们拥有一支专业的研发和技术服务团队，团队成员均有丰富的行业经验和专业知识。',
-        en: 'We have a professional R&D and technical service team, all team members have rich industry experience and professional knowledge.'
+        zh: '我们配备多名高级工程师和各种检测仪器，团队成员均有丰富的金属表面处理行业经验和专业知识，确保电镀溶液分析准确和镀铬阳极产品质量。',
+        en: 'We are equipped with multiple senior engineers and various testing instruments. All team members have rich experience in the metal surface treatment industry and professional knowledge, ensuring accurate analysis of electroplating solutions and high-quality chrome plating anode products.'
       },
       members: [
         {
@@ -94,8 +94,8 @@ export default function AboutPage() {
             en: 'General Manager'
           },
           bio: {
-            zh: '20年表面处理行业经验，曾就职于多家知名企业，带领团队取得多项技术突破。',
-            en: '20 years of experience in the surface treatment industry, previously worked for several well-known companies, led the team to achieve multiple technological breakthroughs.'
+            zh: '20年金属表面处理行业经验，专注于镀铬技术研发，带领团队成功开发DX-30微裂纹硬铬催化剂中间体。',
+            en: '20 years of experience in metal surface treatment industry, focusing on chrome plating technology R&D, led the team to successfully develop DX-30 micro crack hard chromium catalyst intermediate.'
           }
         },
         {
@@ -106,8 +106,8 @@ export default function AboutPage() {
             en: 'Technical Director'
           },
           bio: {
-            zh: '化学工程博士，专注于电镀添加剂研究，拥有多项发明专利。',
-            en: 'Ph.D. in Chemical Engineering, focusing on research of electroplating additives, holds multiple invention patents.'
+            zh: '化学工程博士，专注于镀铬添加剂和阳极制造技术研究，拥有多项发明专利，负责大吨位挤压设备技术升级。',
+            en: 'Ph.D. in Chemical Engineering, focusing on chrome plating additives and anode manufacturing technology research, holds multiple invention patents, responsible for large tonnage extrusion equipment technology upgrade.'
           }
         },
         {
@@ -118,8 +118,8 @@ export default function AboutPage() {
             en: 'Sales Director'
           },
           bio: {
-            zh: '负责公司国内外市场的拓展，建立了完善的销售网络和客户服务体系。',
-            en: 'Responsible for the expansion of domestic and foreign markets, established a comprehensive sales network and customer service system.'
+            zh: '负责公司国内外市场拓展，建立了完善的销售网络和客户服务体系，产品出口至全球多个国家和地区。',
+            en: 'Responsible for domestic and foreign market expansion, established comprehensive sales network and customer service system, products exported to multiple countries and regions worldwide.'
           }
         }
       ]
@@ -136,32 +136,32 @@ export default function AboutPage() {
       items: [
         {
           title: {
-            zh: '品质至上',
-            en: 'Quality First'
+            zh: '专业至上',
+            en: 'Professional Excellence'
           },
           description: {
-            zh: '坚持高标准，对产品品质零妥协，确保为客户提供稳定可靠的产品。',
-            en: 'Adhere to high standards, zero compromise on product quality, ensure stable and reliable products for customers.'
+            zh: '坚持"专业、更专业、最专业"的企业使命，配备多名高级工程师和各种检测仪器，确保产品质量。',
+            en: 'Adhere to the corporate mission of "professional, more professional, and the most professional", equipped with multiple senior engineers and various testing instruments to ensure product quality.'
           }
         },
         {
           title: {
-            zh: '创新驱动',
-            en: 'Innovation Driven'
+            zh: '技术创新',
+            en: 'Technological Innovation'
           },
           description: {
-            zh: '不断投入研发，持续创新，引领行业技术发展方向。',
-            en: 'Continuously invest in R&D, sustain innovation, lead the direction of industry technology development.'
+            zh: '独立开发镀铬溶液金属残渣净化技术，实现溶液永久重复使用，大幅降低原材料成本和环境损害。',
+            en: 'Independently developed chromium plating solution metal residue purification technology, achieving permanent solution reuse, greatly reducing raw material costs and environmental damage.'
           }
         },
         {
           title: {
-            zh: '客户为先',
-            en: 'Customer First'
+            zh: '客户价值',
+            en: 'Customer Value'
           },
           description: {
-            zh: '以客户需求为中心，提供专业的技术支持和完善的售后服务。',
-            en: 'Customer needs centered, provide professional technical support and comprehensive after-sales service.'
+            zh: '以客户需求为中心，提供专业的技术支持和完善的售后服务，产品获得国内外客户广泛认可。',
+            en: 'Customer needs centered, provide professional technical support and comprehensive after-sales service, products widely recognized by domestic and foreign customers.'
           }
         },
         {
@@ -170,8 +170,8 @@ export default function AboutPage() {
             en: 'Environmental Responsibility'
           },
           description: {
-            zh: '注重产品的环保性能，积极承担社会责任，推动行业绿色发展。',
-            en: 'Focus on environmental performance of products, actively assume social responsibility, promote green development of the industry.'
+            zh: '注重产品的环保性能，开发节能环保技术，减少化学品对环境造成的损害，推动行业绿色发展。',
+            en: 'Focus on environmental performance of products, develop energy-saving and environmentally friendly technologies, reduce environmental damage caused by chemicals, promote green development of the industry.'
           }
         }
       ]

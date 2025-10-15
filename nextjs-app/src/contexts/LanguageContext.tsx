@@ -19,8 +19,8 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 const translations: Record<string, Record<Language, string>> = {
   // 通用
   'site.name': {
-    zh: '公司名称',
-    en: 'Company Name',
+    zh: '东莞晶晶表面技术有限公司',
+    en: 'Dongguan Jingjing Surface Technology Co., Ltd.',
   },
   'nav.home': {
     zh: '首页',
@@ -68,32 +68,32 @@ const translations: Record<string, Record<Language, string>> = {
     en: 'Address',
   },
   'contact.address.value': {
-    zh: '广东省深圳市南山区科技园高新南四道W1-A栋2层',
-    en: 'Floor 2, Building W1-A, Hi-Tech South 4th Road, Science Park, Nanshan District, Shenzhen, Guangdong Province, China',
+    zh: '广东省东莞市石碣镇科技中路64号昌盛工业园',
+    en: 'Changsheng Industrial Park, No. 64, Science and Technology Middle Road, Shijie Town, Dongguan City, Guangdong Province, China',
   },
   'contact.phone.title': {
     zh: '联系电话',
     en: 'Phone',
   },
   'contact.phone.sales': {
-    zh: '销售热线: 0755-1234-5678',
-    en: 'Sales: 0755-1234-5678',
+    zh: '销售热线: 0769-8888-8888',
+    en: 'Sales: 0769-8888-8888',
   },
   'contact.phone.support': {
-    zh: '技术支持: 0755-8765-4321',
-    en: 'Technical Support: 0755-8765-4321',
+    zh: '技术支持: 0769-9999-9999',
+    en: 'Technical Support: 0769-9999-9999',
   },
   'contact.email.title': {
     zh: '电子邮箱',
     en: 'Email',
   },
   'contact.email.sales': {
-    zh: 'sales@company.com (销售咨询)',
-    en: 'sales@company.com (Sales Inquiry)',
+    zh: 'sales@jingjing-surface.com (销售咨询)',
+    en: 'sales@jingjing-surface.com (Sales Inquiry)',
   },
   'contact.email.support': {
-    zh: 'support@company.com (技术支持)',
-    en: 'support@company.com (Technical Support)',
+    zh: 'support@jingjing-surface.com (技术支持)',
+    en: 'support@jingjing-surface.com (Technical Support)',
   },
   'contact.hours.title': {
     zh: '工作时间',
