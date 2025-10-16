@@ -1,0 +1,44 @@
+                                             Anode	                                             阳极
+"1.）Using high-purity lead-tin-antimony (with a small amount of silver) as raw materials, the mixture is extruded into shape by an 800-ton press, resulting in a high atomic packing factor in the internal structure."	1，以高纯度铅锡锑（少量的银）为原料混合，经过800吨挤压机挤压成型，内部结构致密度高
+"2.）Long service life: Due to the extrusion process, it avoids the porosity and cold shuts associated with casting, greatly enhancing conductivity and durability."	2， 使用寿命长：因为挤压成型，所以避免了因铸造产生的气孔、冷隔，导电性与耐用性能都得到极大的提升
+"3.）Rapid deposition rate: With an improved atomic packing factor, electrical conductivity is enhanced, leading to a reduction in cell voltage and contributing to energy efficiency and environmental protection."	3，沉积速度快：因为致密性高，导电性能得到提升，槽电压下降，对节能环保做出贡献
+"4.）Improved yield rate: Extrusion molding helps prevent the uneven distribution of alloy components due to varying densities, thus avoiding uneven anodic conductivity."	4，良品率提高：挤压成型可以避免因为不同合金不同密度导致的合金成分分布不均匀而产生的阳极导电不均匀现象
+"5.）Greater strength: The higher density enhances strength, allowing for the production of 10-meter-long anodes that do not elongate due to gravity during use."	5，强度更高：密度高让强度更高，我们可以制造10米长度的阳极在生产使用中不因为重力而拉长
+	
+	
+ceramic tank	陶瓷桶
+"1.）Enhanced product quality: Addresses issues of excessive trivalent chromium and accumulation of copper and iron ions during the chrome plating process, improving quality."	1，提高产品品质：解决镀铬过程中产生的三价铬过高、铜离子铁离子累积导致的品质问题
+"2.）Protecting the environment: Solves the problem of plating liquids being discarded due to the accumulation of metal ions to a critical extent, preventing production."	2，对环境的保护：解决镀液在金属离子累积到一定程度的时候将无法生产导致报废的问题
+"3.）Reduction of trivalent chromium: The electrolytic process can reduce a portion of trivalent chromium, addressing issues caused by excessive levels of it."	3，对三价铬的还原：电解过程中可以还原一部分三价铬，解决三价铬过高导致的问题
+"Principle: Due to its excellent physicochemical properties, the electrolytic ceramic diaphragm is not corroded in the plating solution. This process uses electrolysis to transport impurity cations through the capillary pores of the ceramic diaphragm into the ceramic diaphragm barrel (cathode area), achieving the purpose of removal. As the acid liquid inside the barrel changes from clear to increasingly concentrated, it indicates that impurities in the chromium solution have been collected inside the barrel. Simultaneously, trivalent chromium in the chromium solution or roughening liquid is oxidized to hexavalent chromium at the anode through electrolysis for recycling, while the impurity ions at the cathode are retained within the ceramic diaphragm and removed, thus purifying the roughening liquid and chrome plating solution."	原理：由于具有优异的物理化学性能，电解陶瓷隔膜在镀液中不会被腐蚀。本工艺是利用电解作用， 将杂质阳离子经由陶瓷隔膜毛细孔进入陶瓷隔膜筒内（阴极区），从而达到除去的目的。因此当筒内之酸液色泽由清变为愈来愈浓，即表示铬液中的不纯物已经被收集在筒内，同时铬液或粗化液中之三价铬，亦经过电解作用，在阳极被氧化为六价铬得以循环利用，阴极的杂质离子留在陶瓷隔膜内、去除，从而实现了粗化液和镀铬液的净化
+"Operating Instructions: Prior to use, the bisque barrel should be filled with or immersed in pure water for more than 30 minutes, and thoroughly wiped inside and out with a soft cloth. Secure the bisque barrel to the pole using plastic rope or insulated wire through the two holes at its upper end, and position it on the cathode pole with a copper plate. Load the barrel with a pale brown electrolytic solution (chromic acid at 50g/L and sulfuric acid at 10g/L). The ratio of anode to cathode surface area is 2:1. Set the voltage between 4-10V, maintain a temperature of 50°C, and run for a minimum of 3 hours. Post-electrolysis, first remove the electrode plate from within the barrel, then remove the barrel from the tank. Inspect the electrolyte, which should appear dark brown or slightly thick, and then transfer it to a chromium waste treatment tank or undergo separate detoxification."	"使用方法：素燒筒使用前，筒內盛滿純水,或泡于純水中30min以上,筒內外用軟布擦拭幹淨。素燒筒上端兩孔用塑料繩或絕緣金屬線固定于極杠上，素燒筒放入銅板挂在陰極杠上。將呈淡褐色的電解液（鉻酸50g/L、硫酸10g/L）裝入素燒筒內。陽極與陰極的面積比為2：1。
+                 電壓為4-10V，溫度保持在50℃，時間為3h以上。電解作業完成後，先取出素燒筒內的電極極板，再將素燒筒移出槽外，檢查筒內電解液，應為深褐色或略有黏稠狀，取出電解液倒入鉻廢水處理槽或單獨進行無害化處理。
+"
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

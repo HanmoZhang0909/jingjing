@@ -20,7 +20,7 @@ const translations: Record<string, Record<Language, string>> = {
   // 通用
   'site.name': {
     zh: '东莞晶晶表面技术有限公司',
-    en: 'Dongguan Jingjing Surface Technology Co., Ltd.',
+    en: 'Dongguan Jingjing New Materials Co., Ltd.',
   },
   'nav.home': {
     zh: '首页',
@@ -259,6 +259,136 @@ const translations: Record<string, Record<Language, string>> = {
     zh: '相关案例',
     en: 'Related Cases',
   },
+  
+  // 产品页面
+  'products.title': {
+    zh: '产品与工艺',
+    en: 'Products & Technology',
+  },
+  'products.subtitle': {
+    zh: 'PRODUCTS & TECHNOLOGY',
+    en: 'PRODUCTS & TECHNOLOGY',
+  },
+  'products.learnMore': {
+    zh: '了解更多',
+    en: 'Learn More',
+  },
+  'products.technicalAdvantages': {
+    zh: '我们的产品与技术优势',
+    en: 'Our Product & Technical Advantages',
+  },
+  
+  // 应用场景页面
+  'cases.ourApplicationAreas': {
+    zh: '我们的应用领域',
+    en: 'Our Application Areas',
+  },
+  'cases.technicalAdvantages': {
+    zh: '技术优势',
+    en: 'Technical Advantages',
+  },
+  'cases.mainApplications': {
+    zh: '主要应用：',
+    en: 'Main Applications:',
+  },
+  
+  // 首页内容
+  'home.companyName': {
+    zh: '东莞晶晶表面技术有限公司',
+    en: 'Dongguan Jingjing New Materials Co., Ltd.',
+  },
+  'home.companyDescription': {
+    zh: '成立于2004年，专注于金属表面处理行业的领先企业。我们专注于镀铬技术研发、化工产品生产销售、镀铬设备及配件制造。开发了新型高效的微裂纹硬铬催化剂中间体DX-30（产品编号ST-930），在节能环保方面具有突出优势，广泛应用于电子、汽车、家电、医疗仪器等各领域。',
+    en: 'Established in 2004, we are a leading enterprise specializing in the metal surface treatment industry. We focus on chrome plating technology R&D, chemical product production and sales, chrome plating equipment and accessories manufacturing. We have developed a new and efficient micro crack hard chromium catalyst intermediate DX-30 (Product No. ST-930), which has outstanding advantages in energy saving and environmental protection, and is widely used in electronics, automotive, home appliances, medical instruments and other fields.',
+  },
+  'home.learnMore': {
+    zh: '了解更多',
+    en: 'Learn More',
+  },
+  'home.contactUs': {
+    zh: '联系我们',
+    en: 'Contact Us',
+  },
+  'home.ourAdvantages': {
+    zh: '我们的优势',
+    en: 'Our Advantages',
+  },
+  'home.ourAdvantagesSubtitle': {
+    zh: 'Our advantages',
+    en: 'Our advantages',
+  },
+  'home.advancedTechnology': {
+    zh: '先进工艺',
+    en: 'Advanced Technology',
+  },
+  'home.advancedTechnologyDesc': {
+    zh: '采用大吨位挤压设备，从传统铸造工艺转向挤压成型工艺，大幅提升导电性和使用寿命',
+    en: 'Using large tonnage extrusion equipment, transitioning from traditional casting process to extrusion forming process, greatly improving conductivity and service life',
+  },
+  'home.qualityControl': {
+    zh: '品控流程',
+    en: 'Quality Control',
+  },
+  'home.qualityControlDesc': {
+    zh: '配备多名高级工程师和各种检测仪器，确保电镀溶液分析准确和镀铬阳极产品质量',
+    en: 'Equipped with multiple senior engineers and various testing instruments to ensure accurate electroplating solution analysis and high-quality chrome plating anode products',
+  },
+  'home.professionalService': {
+    zh: '专业服务',
+    en: 'Professional Service',
+  },
+  'home.professionalServiceDesc': {
+    zh: '独立开发镀铬溶液中金属残渣净化技术，实现溶液永久重复使用，大幅降低原材料成本',
+    en: 'Independently developed metal residue purification technology in chrome plating solutions, achieving permanent solution reuse and significantly reducing raw material costs',
+  },
+  'home.companyProfile': {
+    zh: '公司简介',
+    en: 'Company Profile',
+  },
+  'home.companyProfileSubtitle': {
+    zh: 'Company Profile',
+    en: 'Company Profile',
+  },
+  'home.companyProfileDesc': {
+    zh: '东莞晶晶表面技术有限公司成立于2004年，专注于金属表面处理行业的领先企业。我们专注于镀铬技术研发、化工产品生产销售、镀铬设备及配件制造。开发了新型高效的微裂纹硬铬催化剂中间体DX-30（产品编号ST-930），在节能环保方面具有突出优势。2021年成立金属材料制造部（东莞晶晶新材料有限公司），专业制造镀铬阳极，采用大吨位挤压设备，从传统铸造工艺转向挤压成型工艺，大幅提升导电性和使用寿命。',
+    en: 'Dongguan Jingjing Surface Technology Co., Ltd. was established in 2004, focusing on the metal surface treatment industry as a leading enterprise. We focus on chrome plating technology R&D, chemical product production and sales, chrome plating equipment and accessories manufacturing. We have developed a new and efficient micro crack hard chromium catalyst intermediate DX-30 (Product No. ST-930), which has outstanding advantages in energy saving and environmental protection. In 2021, we established the Metal Materials Manufacturing Department (Dongguan Jingjing New Materials Co., Ltd.), specializing in chrome plating anode manufacturing, using large tonnage extrusion equipment, transitioning from traditional casting process to extrusion forming process, greatly improving conductivity and service life.',
+  },
+  'home.viewMore': {
+    zh: '查看更多',
+    en: 'View More',
+  },
+  'home.latestNews': {
+    zh: '最新资讯',
+    en: 'Latest News',
+  },
+  'home.news1': {
+    zh: '东莞晶晶表面技术有限公司成功开发DX-30微裂纹硬铬催化剂',
+    en: 'Dongguan Jingjing Surface Technology Co., Ltd. Successfully Developed DX-30 Micro Crack Hard Chromium Catalyst',
+  },
+  'home.news2': {
+    zh: '我司独立开发镀铬溶液金属残渣净化技术获得重大突破',
+    en: 'Our Company\'s Independent Development of Metal Residue Purification Technology in Chrome Plating Solutions Achieves Major Breakthrough',
+  },
+  'home.news3': {
+    zh: '金属表面处理行业环保技术发展白皮书发布',
+    en: 'Environmental Technology Development White Paper for Metal Surface Treatment Industry Released',
+  },
+  'home.readMore': {
+    zh: '阅读更多',
+    en: 'Read More',
+  },
+  'home.contactSection': {
+    zh: '联系我们',
+    en: 'Contact Us',
+  },
+  'home.contactDesc': {
+    zh: '如有任何问题，欢迎随时与我们联系',
+    en: 'If you have any questions, please feel free to contact us',
+  },
+  'home.contactNow': {
+    zh: '立即咨询',
+    en: 'Contact Now',
+  },
 };
 
 // Provider组件
@@ -287,7 +417,7 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
     return translations[key][language] || key;
   };
 
-  // 当语言发生变化时，保存到localStorage
+  // 当语言发生变化时，立即保存到localStorage
   useEffect(() => {
     if (isClient) {
       localStorage.setItem('language', language);

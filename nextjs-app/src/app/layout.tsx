@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import { Inter, Noto_Sans_SC } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import FloatingLanguageSwitcher from "@/components/FloatingLanguageSwitcher";
+import PageContent from "@/components/PageContent";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -26,9 +28,12 @@ export default function RootLayout({
     <html lang="zh-CN">
       <body className={`${inter.className} ${notoSansSC.variable} font-sans min-h-screen flex flex-col`}>
         <LanguageProvider>
-          <Navbar />
-          <main className="flex-grow">{children}</main>
-          <Footer />
+          <PageContent>
+            <Navbar />
+            <main className="flex-grow">{children}</main>
+            <Footer />
+          </PageContent>
+          <FloatingLanguageSwitcher />
         </LanguageProvider>
       </body>
     </html>

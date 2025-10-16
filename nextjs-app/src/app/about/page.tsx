@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { motion } from 'framer-motion';
 
 export default function AboutPage() {
   const { language } = useLanguage();
@@ -185,41 +186,88 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen">
       {/* 页面标题区域 */}
-      <div className="relative w-full h-64 bg-gradient-to-r from-blue-800 to-blue-600">
+      <div className="relative w-full h-48 sm:h-56 lg:h-64 bg-gradient-to-r from-blue-800 to-blue-600 overflow-hidden">
         <div className="absolute inset-0 bg-black opacity-30"></div>
-        <div className="absolute inset-0 flex flex-col justify-center items-center text-white">
-          <h1 className="text-4xl md:text-5xl font-bold mb-2">{pageContent.title[language]}</h1>
-          <p className="text-xl">{pageContent.subtitle[language]}</p>
-        </div>
+        <motion.div 
+          className="absolute inset-0 flex flex-col justify-center items-center text-white px-4"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <motion.h1 
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 text-center"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            {pageContent.title[language]}
+          </motion.h1>
+          <motion.p 
+            className="text-base sm:text-lg lg:text-xl text-center"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            {pageContent.subtitle[language]}
+          </motion.p>
+        </motion.div>
       </div>
 
       {/* 公司简介 */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
+      <section className="py-8 sm:py-12 lg:py-16 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-10">{pageContent.title[language]}</h2>
-            <div className="mb-8 text-lg text-gray-700 leading-relaxed">
+            <motion.h2 
+              className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-6 sm:mb-8 lg:mb-10"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              {pageContent.title[language]}
+            </motion.h2>
+            <motion.div 
+              className="mb-6 sm:mb-8 text-sm sm:text-base lg:text-lg text-gray-700 leading-relaxed"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
               <p className="mb-4">{pageContent.intro[language]}</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="overflow-hidden rounded-lg shadow-lg">
+            </motion.div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
+              <motion.div 
+                className="overflow-hidden rounded-lg shadow-lg"
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.05 }}
+              >
                 <Image 
-                  src="/company1.jpg" 
+                  src="/独立站图片素材/晶晶表面.jpg" 
                   alt={pageContent.title[language]} 
                   width={600} 
                   height={400}
                   className="w-full h-full object-cover"
                 />
-              </div>
-              <div className="overflow-hidden rounded-lg shadow-lg">
+              </motion.div>
+              <motion.div 
+                className="overflow-hidden rounded-lg shadow-lg"
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.05 }}
+              >
                 <Image 
-                  src="/company2.jpg" 
+                  src="/独立站图片素材/晶晶.jpg" 
                   alt={pageContent.title[language]} 
                   width={600} 
                   height={400}
                   className="w-full h-full object-cover"
                 />
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>

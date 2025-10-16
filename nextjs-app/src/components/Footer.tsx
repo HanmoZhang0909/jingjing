@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { motion } from 'framer-motion';
 
 export default function Footer() {
   const { language } = useLanguage();
@@ -101,87 +102,142 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-gray-800 text-white">
-      <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <h3 className="text-lg font-semibold mb-4">{footerTranslations.latestNews[language]}</h3>
+    <motion.footer 
+      className="bg-gray-800 text-white"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">{footerTranslations.latestNews[language]}</h3>
             <ul className="space-y-2">
-              {newsItems.map(news => (
-                <li key={news.id}>
-                  <Link href={`/news/${news.slug}`} className="text-gray-300 hover:text-white">
+              {newsItems.map((news, index) => (
+                <motion.li 
+                  key={news.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ x: 5 }}
+                >
+                  <Link href={`/news/${news.slug}`} className="text-gray-300 hover:text-white transition-colors text-sm sm:text-base leading-tight">
                     {language === 'zh' ? news.titleZh : news.titleEn}
                   </Link>
-                  <p className="text-gray-400 text-sm">{formatDate(news.date)}</p>
-                </li>
+                  <p className="text-gray-400 text-xs sm:text-sm">{formatDate(news.date)}</p>
+                </motion.li>
               ))}
             </ul>
-          </div>
+          </motion.div>
           
-          <div>
-            <h3 className="text-lg font-semibold mb-4">{footerTranslations.contactInfo[language]}</h3>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">{footerTranslations.contactInfo[language]}</h3>
             <ul className="space-y-2 text-gray-300">
-              <li className="flex items-start">
-                <span className="font-semibold mr-2">{footerTranslations.companyAddress[language]}</span>
-                <span>{footerTranslations.addressValue[language]}</span>
-              </li>
-              <li className="flex items-start">
-                <span className="font-semibold mr-2">{footerTranslations.phone[language]}</span>
-                <span>0769-8888-8888</span>
-              </li>
-              <li className="flex items-start">
-                <span className="font-semibold mr-2">{footerTranslations.usOffice[language]}</span>
-                <span>305 Inglewood ave, La Verne, CA 91750, USA</span>
-              </li>
-              <li className="flex items-start">
-                <span className="font-semibold mr-2">{footerTranslations.usPhone[language]}</span>
-                <span>+1 626-606-6126</span>
-              </li>
-              <li className="flex items-start">
-                <span className="font-semibold mr-2">{footerTranslations.email[language]}</span>
-                <span>contact@jingjing-surface.com</span>
-              </li>
+              {[
+                { label: footerTranslations.companyAddress[language], value: footerTranslations.addressValue[language] },
+                { label: footerTranslations.phone[language], value: "0769-8888-8888" },
+                { label: footerTranslations.usOffice[language], value: "305 Inglewood ave, La Verne, CA 91750, USA" },
+                { label: footerTranslations.usPhone[language], value: "+1 626-606-6126" },
+                { label: footerTranslations.email[language], value: "contact@jingjing-surface.com" }
+              ].map((item, index) => (
+                <motion.li 
+                  key={index}
+                  className="flex items-start"
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ x: 5 }}
+                >
+                  <span className="font-semibold mr-2 text-xs sm:text-sm">{item.label}</span>
+                  <span className="text-xs sm:text-sm">{item.value}</span>
+                </motion.li>
+              ))}
             </ul>
-          </div>
+          </motion.div>
           
-          <div>
-            <h3 className="text-lg font-semibold mb-4">{footerTranslations.contactUs[language]}</h3>
-            <form className="space-y-4">
-              <div>
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">{footerTranslations.contactUs[language]}</h3>
+            <form className="space-y-3 sm:space-y-4">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.8 }}
+                viewport={{ once: true }}
+              >
                 <input 
                   type="text" 
                   placeholder={footerTranslations.namePlaceholder[language]} 
-                  className="w-full p-2 bg-gray-700 text-white border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full p-2 sm:p-3 bg-gray-700 text-white border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 text-sm sm:text-base"
                 />
-              </div>
-              <div>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.9 }}
+                viewport={{ once: true }}
+              >
                 <input 
                   type="email" 
                   placeholder={footerTranslations.emailPlaceholder[language]} 
-                  className="w-full p-2 bg-gray-700 text-white border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full p-2 sm:p-3 bg-gray-700 text-white border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 text-sm sm:text-base"
                 />
-              </div>
-              <div>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 1.0 }}
+                viewport={{ once: true }}
+              >
                 <textarea 
                   placeholder={footerTranslations.messagePlaceholder[language]} 
                   rows={3}
-                  className="w-full p-2 bg-gray-700 text-white border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full p-2 sm:p-3 bg-gray-700 text-white border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 text-sm sm:text-base"
                 ></textarea>
-              </div>
-              <button 
+              </motion.div>
+              <motion.button 
                 type="submit" 
-                className="bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700"
+                className="bg-blue-600 text-white py-2 sm:py-3 px-4 sm:px-6 rounded-md hover:bg-blue-700 transition-all duration-300 text-sm sm:text-base"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 1.1 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
                 {footerTranslations.send[language]}
-              </button>
+              </motion.button>
             </form>
-          </div>
+          </motion.div>
         </div>
         
-        <div className="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
-          <p>{footerTranslations.copyright[language]}</p>
-        </div>
+        <motion.div 
+          className="mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-gray-700 text-center text-gray-400"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 1.2 }}
+          viewport={{ once: true }}
+        >
+          <p className="text-xs sm:text-sm">{footerTranslations.copyright[language]}</p>
+        </motion.div>
       </div>
-    </footer>
+    </motion.footer>
   );
 } 
