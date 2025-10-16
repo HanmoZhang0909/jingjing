@@ -55,7 +55,7 @@ export default function CasesPage() {
             'Steering system components'
           ]
         },
-        image: '/独立站图片素材/应用场景/1.jpg'
+        image: '/独立站图片素材/应用场景/Chrome_faucet_with_hotcold_indicators_1600x1920.jpg'
       },
       {
         id: 'electronics',
@@ -83,7 +83,7 @@ export default function CasesPage() {
             'PCB connectors'
           ]
         },
-        image: '/独立站图片素材/应用场景/2.jpg'
+        image: '/独立站图片素材/应用场景/Colorful_chemistry_lab_glassware_and_liquids_1024x516.jpg'
       },
       {
         id: 'machinery',
@@ -111,7 +111,7 @@ export default function CasesPage() {
             'Gear surface treatment'
           ]
         },
-        image: '/独立站图片素材/应用场景/3.jpg'
+        image: '/独立站图片素材/应用场景/Industrial_metal_roller_in_workshop_1086x724.jpg'
       },
       {
         id: 'aerospace',
@@ -139,7 +139,7 @@ export default function CasesPage() {
             'Navigation equipment housing'
           ]
         },
-        image: '/独立站图片素材/应用场景/4.jpg'
+        image: '/独立站图片素材/应用场景/Metal_cylindrical_component_in_workshop_450x350.jpg'
       },
       {
         id: 'medical',
@@ -167,7 +167,7 @@ export default function CasesPage() {
             'Rehabilitation equipment surface'
           ]
         },
-        image: '/独立站图片素材/应用场景/5.jpg'
+        image: '/独立站图片素材/应用场景/Modern_chrome_faucet_design_1024x748.jpg'
       },
       {
         id: 'home-appliances',
@@ -195,7 +195,7 @@ export default function CasesPage() {
             'Kitchen appliance surface'
           ]
         },
-        image: '/独立站图片素材/应用场景/6.jpg'
+        image: '/独立站图片素材/应用场景/Polished_metal_cylinder_industrial_equipment_799x387.jpg'
       }
     ],
     technicalAdvantages: {

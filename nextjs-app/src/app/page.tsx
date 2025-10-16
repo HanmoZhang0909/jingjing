@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* 主页横幅 */}
-      <div className="relative h-[300px] sm:h-[400px] lg:h-[500px] bg-gray-900 overflow-hidden">
+      <div className="relative h-[300px] sm:h-[400px] lg:h-[600px] xl:h-[800px] 2xl:h-[1000px] bg-gray-900 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/70 to-transparent z-10"></div>
         <motion.div 
           className="absolute inset-0 flex items-center z-20"
@@ -59,7 +59,7 @@ export default function Home() {
           transition={{ duration: 1.2, ease: "easeOut" }}
         >
           <Image 
-            src="/独立站图片素材/表面技术抬头.jpg" 
+            src="/独立站图片素材/Gemini_Generated_Image_home_cover_1344x768.png" 
             alt="晶晶表面技术公司"
             fill
             style={{objectFit: "cover"}}
@@ -149,7 +149,7 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <Image 
-                src="/独立站图片素材/Ha095e70a70a84d8ead697d10c5b6fd98G.webp" 
+                src="/独立站图片素材/Company_Profile.webp" 
                 alt="晶晶表面技术公司" 
                 width={500} 
                 height={400} 

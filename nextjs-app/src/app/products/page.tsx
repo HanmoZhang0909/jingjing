@@ -40,37 +40,47 @@ export default function ProductsPage() {
         },
         features: {
           zh: [
-            '更高效的阴极电流（高达25%-27%），沉积速度快，是传统技术的两倍',
-            '铬层硬度高，符合GB9790-88标准，硬度范围860-1200 HV',
+            '更高效的阴极电流（高达25%-27%），沉积速度快，是传统技术的两倍。在阴极电流密度70A/dm²，温度55-65℃条件下，电流效率高达60%',
+            '铬层硬度高，符合GB9790-88标准，硬度范围860-1200 HV，耐用性提高20%-30%',
             '铬层微裂纹多，范围200-1000/cm²，比传统工艺更耐腐蚀',
             '铬层与基体结合更牢固，预处理操作更简单',
-            '铬溶液分散性更好，层厚更均匀，表面更光滑',
-            '铬溶液不含氟化物，可防止电镀过程中因低电流对工件的腐蚀'
+            '铬溶液分散性更好，层厚更均匀，表面更光滑，几乎无滚痕',
+            '铬溶液不含氟化物，可防止电镀过程中因低电流对工件的腐蚀',
+            '阳极溶液导电性好，对阳极腐蚀少，减少人工成本和燃料消耗两倍'
           ],
           en: [
-            'More efficient cathode current (up to 25%-27%), fast deposition speed, twice that of traditional technology',
-            'High hardness chromium layer, meets GB9790-88 standard, hardness range 860-1200 HV',
+            'More efficient cathode current (up to 25%-27%), fast deposition speed, twice that of traditional technology. Under cathode current density 70A/dm², temperature 55-65℃, current efficiency as high as 60%',
+            'High hardness chromium layer, meets GB9790-88 standard, hardness range 860-1200 HV, durability increased by 20%-30%',
             'Many microcracks in chromium layer, range 200-1000/cm², more corrosion-resistant than traditional processes',
             'Chromium layer bonds more firmly to substrate, simpler pre-treatment operation',
-            'Better dispersibility of chromium solution, more uniform layer thickness, smoother surface',
-            'Chromium solution contains no fluoride, prevents corrosion of workpiece due to low current during electroplating'
+            'Better dispersibility of chromium solution, more uniform layer thickness, smoother surface with almost no rolling',
+            'Chromium solution contains no fluoride, prevents corrosion of workpiece due to low current during electroplating',
+            'Anode solution has good conductivity and less corrosion to the anode, reducing labor costs and fuel consumption by two times'
           ]
         },
         specifications: {
           zh: {
-            status: '白色粉末',
-            formula: 'NaSO3CH2SO3Na',
-            weight: '220.12',
-            purity: '99.99%以上'
+            '产品编号': 'ST-930',
+            '外观状态': '白色粉末',
+            '分子式': 'NaSO3CH2SO3Na',
+            '分子量': '220.12',
+            '纯度': '99.99%以上',
+            '工艺参数': 'CrO3 250g/L, DX-30 4g/L',
+            '工作温度': '55-65℃',
+            '电流密度': '70A/dm²'
           },
           en: {
-            status: 'White powder',
-            formula: 'NaSO3CH2SO3Na',
-            weight: '220.12',
-            purity: 'Above 99.99%'
+            'Product No.': 'ST-930',
+            'Appearance': 'White powder',
+            'Molecular formula': 'NaSO3CH2SO3Na',
+            'Molecular weight': '220.12',
+            'Purity': 'Above 99.99%',
+            'Process parameters': 'CrO3 250g/L, DX-30 4g/L',
+            'Working temperature': '55-65℃',
+            'Current density': '70A/dm²'
           }
         },
-        image: '/独立站图片素材/表面技术抬头.jpg'
+        image: '/独立站图片素材/Colorful_molecular_structure_illustration_1024x687.jpg'
       },
       {
         id: 'fct-anode',
@@ -87,32 +97,42 @@ export default function ProductsPage() {
             '使用寿命长：挤压成型避免了铸造产生的气孔、冷隔，导电性与耐用性能极大提升',
             '沉积速度快：致密性高，导电性能提升，槽电压下降，节能环保',
             '良品率提高：避免合金成分分布不均匀导致的阳极导电不均匀现象',
-            '强度更高：密度高让强度更高，可制造10米长度的阳极',
-            '使用寿命达3-5年，节省约30%的电力消耗'
+            '强度更高：密度高让强度更高，可制造10米长度的阳极，使用中不会因重力而伸长',
+            '使用寿命达3-5年，节省约30%的电力消耗，在环保方面实现根本性改善',
+            '采用高纯度铅锡锑（含少量银）为原料，锡含量3-10%，锑含量2-3%，银含量0.5-1%'
           ],
           en: [
             'Long service life: Extrusion molding avoids porosity and cold shuts from casting, greatly enhancing conductivity and durability',
             'Rapid deposition rate: High density improves conductivity, reduces cell voltage, energy saving and environmental protection',
             'Improved yield rate: Prevents uneven distribution of alloy components causing uneven anodic conductivity',
-            'Greater strength: Higher density enhances strength, can manufacture 10-meter-long anodes',
-            'Service life reaches 3-5 years, saves about 30% of electricity consumption'
+            'Greater strength: Higher density enhances strength, can manufacture 10-meter-long anodes that do not elongate due to gravity during use',
+            'Service life reaches 3-5 years, saves about 30% of electricity consumption, achieving fundamental improvement in environmental protection',
+            'Using high-purity lead-tin-antimony (with a small amount of silver) as raw materials, tin content 3-10%, antimony content 2-3%, silver content 0.5-1%'
           ]
         },
         specifications: {
           zh: {
-            material: '高纯度铅锡锑合金',
-            process: '800吨挤压机挤压成型',
-            serviceLife: '3-5年',
-            conductivity: '提升30%'
+            '材料成分': '高纯度铅锡锑合金（含少量银）',
+            '成型工艺': '800吨挤压机挤压成型',
+            '使用寿命': '3-5年',
+            '导电性提升': '30%',
+            '锡含量': '3-10%',
+            '锑含量': '2-3%',
+            '银含量': '0.5-1%',
+            '最大长度': '10米'
           },
           en: {
-            material: 'High-purity lead-tin-antimony alloy',
-            process: '800-ton press extrusion molding',
-            serviceLife: '3-5 years',
-            conductivity: '30% improvement'
+            'Material composition': 'High-purity lead-tin-antimony alloy (with a small amount of silver)',
+            'Forming process': '800-ton press extrusion molding',
+            'Service life': '3-5 years',
+            'Conductivity improvement': '30%',
+            'Tin content': '3-10%',
+            'Antimony content': '2-3%',
+            'Silver content': '0.5-1%',
+            'Maximum length': '10 meters'
           }
         },
-        image: '/独立站图片素材/新材料抬头.jpg'
+        image: '/独立站图片素材/Blue_crystal_formations_in_abstract_background_618x347.jpg'
       },
       {
         id: 'ceramic-tank',
@@ -129,30 +149,42 @@ export default function ProductsPage() {
             '提高产品品质：解决镀铬过程中产生的三价铬过高、铜离子铁离子累积导致的品质问题',
             '环境保护：解决镀液在金属离子累积到一定程度时无法生产导致报废的问题',
             '三价铬还原：电解过程中可以还原一部分三价铬，解决三价铬过高导致的问题',
-            '实现粗化液和镀铬液的净化，延长镀液使用寿命'
+            '实现粗化液和镀铬液的净化，延长镀液使用寿命',
+            '电解陶瓷隔膜具有优异的物理化学性能，在镀液中不被腐蚀',
+            '通过电解作用将杂质阳离子通过陶瓷隔膜毛细孔传输到陶瓷隔膜筒内（阴极区）',
+            '阳极与阴极表面积比例为2:1，电压4-10V，温度50℃，运行时间3小时以上'
           ],
           en: [
             'Enhanced product quality: Addresses quality issues caused by excessive trivalent chromium and accumulation of copper and iron ions during chrome plating',
             'Environmental protection: Solves the problem of plating liquids being discarded due to metal ion accumulation',
             'Trivalent chromium reduction: Electrolytic process can reduce trivalent chromium, addressing excessive levels',
-            'Achieves purification of roughening liquid and chrome plating solution, extends plating solution service life'
+            'Achieves purification of roughening liquid and chrome plating solution, extends plating solution service life',
+            'Electrolytic ceramic diaphragm has excellent physicochemical properties and is not corroded in plating solution',
+            'Through electrolysis, impurity cations are transported through ceramic diaphragm capillary pores into ceramic diaphragm barrel (cathode area)',
+            'Anode to cathode surface area ratio is 2:1, voltage 4-10V, temperature 50℃, running time more than 3 hours'
           ]
         },
         specifications: {
           zh: {
-            material: '电解陶瓷隔膜',
-            voltage: '4-10V',
-            temperature: '50℃',
-            time: '3小时以上'
+            '材料': '电解陶瓷隔膜',
+            '工作电压': '4-10V',
+            '工作温度': '50℃',
+            '运行时间': '3小时以上',
+            '阳极阴极比例': '2:1',
+            '电解液成分': '铬酸50g/L，硫酸10g/L',
+            '净化效果': '实现粗化液和镀铬液净化'
           },
           en: {
-            material: 'Electrolytic ceramic diaphragm',
-            voltage: '4-10V',
-            temperature: '50℃',
-            time: 'More than 3 hours'
+            'Material': 'Electrolytic ceramic diaphragm',
+            'Working voltage': '4-10V',
+            'Working temperature': '50℃',
+            'Running time': 'More than 3 hours',
+            'Anode-cathode ratio': '2:1',
+            'Electrolyte composition': 'Chromic acid 50g/L, sulfuric acid 10g/L',
+            'Purification effect': 'Achieves purification of roughening liquid and chrome plating solution'
           }
         },
-        image: '/独立站图片素材/微信图片_20240411135828.png'
+        image: '/独立站图片素材/Industrial_surface_technology_equipment_522x800.jpg'
       }
     ],
     technicalAdvantages: {

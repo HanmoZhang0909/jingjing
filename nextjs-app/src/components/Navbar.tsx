@@ -36,7 +36,7 @@ export default function Navbar() {
                 <div className="flex-shrink-0">
                   <div className="flex items-center">
                     <img 
-                      src="/独立站图片素材/晶晶表面Logo.png" 
+                      src="/独立站图片素材/Red_and_white_logo_with_stylized_letter_N_200x157.png" 
                       alt="晶晶表面技术Logo" 
                       className="w-8 h-8 mr-2"
                     />
@@ -67,7 +67,7 @@ export default function Navbar() {
                 >
                   <Link href="/" className="flex items-center">
                     <motion.img 
-                      src="/独立站图片素材/晶晶表面Logo.png" 
+                      src="/独立站图片素材/Red_and_white_logo_with_stylized_letter_N_200x157.png" 
                       alt="晶晶表面技术Logo" 
                       className="w-8 h-8 mr-2 flex-shrink-0"
                       whileHover={{ rotate: 360 }}

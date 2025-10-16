@@ -25,7 +25,7 @@ export default function NewsPage() {
         zh: '我公司研发团队成功开发出新型环保电镀工艺，显著减少重金属排放，提高生产效率。',
         en: 'Our R&D team has successfully developed a new eco-friendly electroplating process that significantly reduces heavy metal emissions and improves production efficiency.'
       },
-      image: '/news1.jpg',
+      image: '/独立站图片素材/Current_Efficiency_Comparison_Graph_370x350.png',
       date: '2023-10-15',
       author: {
         zh: '技术部',
@@ -43,7 +43,7 @@ export default function NewsPage() {
         zh: '我公司成功参展2023国际表面处理展览会，展示多项创新技术和解决方案，获得行业广泛关注。',
         en: 'Our company successfully participated in the 2023 International Surface Treatment Exhibition, showcasing numerous innovative technologies and solutions, garnering widespread industry attention.'
       },
-      image: '/news2.jpg',
+      image: '/独立站图片素材/Deposition_speed_vs_cathode_current_density_310x274.png',
       date: '2023-09-25',
       author: {
         zh: '市场部',
@@ -61,7 +61,7 @@ export default function NewsPage() {
         zh: '我公司与某全球知名汽车制造商签订长期战略合作协议，为其提供高端表面处理技术支持。',
         en: 'Our company has signed a long-term strategic cooperation agreement with a globally renowned automotive manufacturer to provide high-end surface treatment technical support.'
       },
-      image: '/news3.jpg',
+      image: '/独立站图片素材/Electrochemical_performance_comparison_graphs_586x246.png',
       date: '2023-08-18',
       author: {
         zh: '商务部',
@@ -79,7 +79,7 @@ export default function NewsPage() {
         zh: '我公司凭借在表面处理领域的持续创新和突出贡献，荣获行业协会颁发的"年度创新技术企业"称号。',
         en: 'Our company has been awarded the "Innovative Technology Enterprise of the Year" by the industry association for continuous innovation and outstanding contributions in the field of surface treatment.'
       },
-      image: '/news4.jpg',
+      image: '/独立站图片素材/Red_and_white_logo_with_stylized_letter_N_200x157.png',
       date: '2023-07-22',
       author: {
         zh: '行政部',
@@ -97,7 +97,7 @@ export default function NewsPage() {
         zh: '我公司发布2023年度最新表面处理解决方案目录，涵盖多个行业应用和技术创新。',
         en: 'Our company has released the latest surface treatment solutions catalog for 2023, covering multiple industry applications and technological innovations.'
       },
-      image: '/news5.jpg',
+      image: '/独立站图片素材/Red_and_white_logo_with_stylized_letter_N_200x157.png',
       date: '2023-06-30',
       author: {
         zh: '产品部',
@@ -115,7 +115,7 @@ export default function NewsPage() {
         zh: '我公司顺利通过年度环保审核，凭借先进的环保设施和严格的排放管理，获评A级环保企业。',
         en: 'Our company has successfully passed the annual environmental audit and been rated as a Grade A environmental protection enterprise thanks to advanced environmental facilities and strict emission management.'
       },
-      image: '/news6.jpg',
+      image: '/独立站图片素材/Dongguan_Jingjing_Surface_Technology_Inc_Website_1503x734.png',
       date: '2023-05-19',
       author: {
         zh: '环保部',

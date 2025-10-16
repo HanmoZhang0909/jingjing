@@ -18,88 +18,92 @@ export interface NewsArticle {
 export const newsArticles: NewsArticle[] = [
   {
     id: 1,
-    titleZh: '深圳新能源产业创新发展论坛成功举办',
-    titleEn: 'Shenzhen New Energy Industry Innovation Development Forum Successfully Held',
-    summaryZh: '论坛聚焦新能源技术创新与产业化应用，吸引了众多业内专家和企业代表参与。',
-    summaryEn: 'The forum focused on new energy technology innovation and industrial applications, attracting many industry experts and business representatives.',
+    titleZh: 'DX-30微裂纹硬铬催化剂中间体技术突破，电流效率提升至60%',
+    titleEn: 'DX-30 Micro Crack Hard Chromium Catalyst Intermediate Technology Breakthrough, Current Efficiency Improved to 60%',
+    summaryZh: '我司成功开发DX-30微裂纹硬铬催化剂中间体，电流效率提升25%-27%，沉积速度是传统技术的两倍。',
+    summaryEn: 'Our company successfully developed DX-30 micro crack hard chromium catalyst intermediate, improving current efficiency by 25%-27%, with deposition speed twice that of traditional technology.',
     contentZh: `
-      <p>近日，由深圳市发展和改革委员会指导，深圳市工业和信息化局主办的"2023深圳新能源产业创新发展论坛"在深圳会展中心成功举办。本次论坛以"创新引领·绿色发展"为主题，聚焦新能源技术创新与产业化应用，吸引了众多业内专家和企业代表参与。</p>
+      <p>近日，东莞晶晶表面技术有限公司宣布成功开发DX-30微裂纹硬铬催化剂中间体（产品编号ST-930），在硬铬电镀技术领域取得重大突破。该产品是一种固体粉末中间体，可显著提高电流效率，减少镀液对阳极板的腐蚀。</p>
       
-      <p>论坛上，与会专家就新能源汽车、光伏发电、储能技术等热点领域进行了深入探讨，分享了最新的技术突破和市场趋势。深圳市工业和信息化局相关负责人表示，深圳将继续加大对新能源产业的支持力度，促进产业链上下游协同发展，助力深圳建设成为全球新能源创新高地。</p>
+      <p>DX-30技术具有多项突出优势：更高效的阴极电流（高达25%-27%），沉积速度快，是传统技术的两倍。在阴极电流密度70A/dm²，温度55-65℃条件下，电流效率高达60%。铬层硬度高，符合GB9790-88标准，硬度范围860-1200 HV，耐用性提高20%-30%。</p>
       
-      <p>据悉，深圳新能源产业近年来保持高速增长，2022年产值突破5000亿元，成为引领深圳经济高质量发展的重要引擎。未来，深圳将进一步完善新能源产业发展政策，加强关键技术攻关，推动新能源与人工智能、大数据等新兴技术深度融合，构建更加完善的新能源产业生态体系。</p>
+      <p>该产品使成品表面更光滑、更亮，增加涂层硬度，产生更多微裂纹，具有更高的耐腐蚀性。铬层与基体结合更牢固，预处理操作更简单。铬溶液分散性更好，层厚更均匀，表面更光滑，几乎无滚痕。铬溶液不含氟化物，可防止电镀过程中因低电流对工件的腐蚀。</p>
+      
+      <p>技术参数：外观为白色粉末，分子式NaSO3CH2SO3Na，分子量220.12，纯度99.99%以上。工艺参数为CrO3 250g/L，DX-30 4g/L，工作温度55-65℃，电流密度70A/dm²。</p>
     `,
     contentEn: `
-      <p>Recently, the "2023 Shenzhen New Energy Industry Innovation Development Forum," guided by the Shenzhen Development and Reform Commission and hosted by the Shenzhen Industry and Information Technology Bureau, was successfully held at the Shenzhen Convention and Exhibition Center. The forum, themed "Innovation Leading Green Development," focused on new energy technology innovation and industrial applications, attracting numerous industry experts and business representatives.</p>
+      <p>Recently, Dongguan Jingjing Surface Technology Co., Ltd. announced the successful development of DX-30 micro crack hard chromium catalyst intermediate (Product No. ST-930), achieving a major breakthrough in hard chromium electroplating technology. This product is a solid powder intermediate that can significantly improve current efficiency and reduce corrosion of the plating solution on the anode plate.</p>
       
-      <p>During the forum, participating experts conducted in-depth discussions on hot topics such as new energy vehicles, photovoltaic power generation, and energy storage technology, sharing the latest technological breakthroughs and market trends. A representative from the Shenzhen Industry and Information Technology Bureau stated that Shenzhen will continue to increase support for the new energy industry, promote coordinated development of the upstream and downstream industrial chain, and help Shenzhen become a global innovation hub for new energy.</p>
+      <p>DX-30 technology has multiple outstanding advantages: more efficient cathode current (up to 25%-27%), fast deposition speed, twice that of traditional technology. Under cathode current density 70A/dm², temperature 55-65℃, current efficiency as high as 60%. High hardness chromium layer, meets GB9790-88 standard, hardness range 860-1200 HV, durability increased by 20%-30%.</p>
       
-      <p>According to reports, Shenzhen's new energy industry has maintained rapid growth in recent years, with output value exceeding 500 billion yuan in 2022, becoming an important engine driving Shenzhen's high-quality economic development. In the future, Shenzhen will further improve new energy industry development policies, strengthen key technology research, promote deep integration of new energy with emerging technologies such as artificial intelligence and big data, and build a more complete new energy industry ecosystem.</p>
+      <p>This product makes the surface of the finished product smoother and brighter, increases the hardness of the coating, generates more microcracks, and has higher corrosion resistance. The chromium layer bonds more firmly to the substrate, and the pre-treatment operation is simpler. The chromium solution has better dispersibility, more uniform layer thickness, and a smoother surface with almost no rolling.</p>
+      
+      <p>Technical specifications: White powder appearance, molecular formula NaSO3CH2SO3Na, molecular weight 220.12, purity above 99.99%. Process parameters: CrO3 250g/L, DX-30 4g/L, working temperature 55-65℃, current density 70A/dm².</p>
     `,
     image: '/images/news/news1.jpg',
-    date: '2023-11-15',
+    date: '2024-01-15',
     authorZh: '张明',
     authorEn: 'Zhang Ming',
-    slug: 'shenzhen-new-energy-forum'
+    slug: 'dx30-technology-breakthrough'
   },
   {
     id: 2,
-    titleZh: '我司成功研发新型太阳能电池技术',
-    titleEn: 'Our Company Successfully Develops New Solar Cell Technology',
-    summaryZh: '突破性技术将太阳能电池转换效率提高至26%，处于国际领先水平。',
-    summaryEn: 'Breakthrough technology increases solar cell conversion efficiency to 26%, reaching international leading levels.',
+    titleZh: 'FC-T高密度挤压合金阳极成功量产，使用寿命延长至5年',
+    titleEn: 'FC-T High-Density Extruded Alloy Anode Successfully Mass Produced, Service Life Extended to 5 Years',
+    summaryZh: '我司FC-T铅锡锑高密度挤压合金阳极成功实现量产，使用寿命达3-5年，导电性提升30%。',
+    summaryEn: 'Our company\'s FC-T lead-tin-antimony high-density extruded alloy anode successfully achieved mass production, with service life reaching 3-5 years and conductivity improved by 30%.',
     contentZh: `
-      <p>近日，我司研发团队宣布成功研发出新一代高效太阳能电池技术。此项技术采用独特的钙钛矿-硅叠层结构，将太阳能转换效率提升至26%，较传统技术提升约20%，达到国际领先水平。</p>
+      <p>近日，东莞晶晶新材料有限公司宣布FC-T铅锡锑高密度挤压合金阳极成功实现量产，标志着公司在镀铬阳极制造技术方面取得重大突破。该产品采用高纯度铅锡锑（含少量银）为原料混合，经过800吨挤压机挤压成型，内部结构致密度高。</p>
       
-      <p>该技术的核心突破在于解决了钙钛矿材料稳定性差的行业难题，通过创新性的界面工程和封装技术，使电池组件寿命延长至25年以上，满足商业化应用需求。同时，新技术降低了生产成本，有望使太阳能发电成本进一步降低15%-20%。</p>
+      <p>FC-T阳极具有多项技术优势：使用寿命长，挤压成型避免了铸造产生的气孔、冷隔，导电性与耐用性能极大提升。沉积速度快，致密性高，导电性能提升，槽电压下降，节能环保。良品率提高，避免合金成分分布不均匀导致的阳极导电不均匀现象。</p>
       
-      <p>公司首席技术官李博士表示："这一突破标志着我们在可再生能源领域迈出了重要一步。我们计划在未来12个月内实现量产，为全球清洁能源转型做出贡献。"</p>
+      <p>该产品强度更高，密度高让强度更高，可制造10米长度的阳极，使用中不会因重力而伸长。使用寿命达3-5年，节省约30%的电力消耗，在环保方面实现根本性改善。采用高纯度铅锡锑（含少量银）为原料，锡含量3-10%，锑含量2-3%，银含量0.5-1%。</p>
       
-      <p>业内专家评价，该技术将大幅提升光伏发电的经济性，加速平价上网进程，对推动我国能源结构调整和碳达峰、碳中和目标实现具有重要意义。</p>
+      <p>相比传统铸造工艺，FC-T阳极解决了传统电镀硬铬阳极多年来使用铅锑或铅锡锑金属铸造工艺的问题，避免了内部金相组织疏松、冷隔、铸造结节、缩孔和氧化物夹杂等缺陷，大大提升了产品质量和性能。</p>
     `,
     contentEn: `
-      <p>Recently, our company's R&D team announced the successful development of a new generation of high-efficiency solar cell technology. This technology adopts a unique perovskite-silicon tandem structure, increasing solar energy conversion efficiency to 26%, about 20% higher than traditional technology, reaching an international leading level.</p>
+      <p>Recently, Dongguan Jingjing New Materials Co., Ltd. announced the successful mass production of FC-T lead-tin-antimony high-density extruded alloy anode, marking a major breakthrough in the company's chrome plating anode manufacturing technology. This product uses high-purity lead-tin-antimony (with a small amount of silver) as raw materials, mixed and extruded into shape by an 800-ton press, resulting in high internal structure density.</p>
       
-      <p>The core breakthrough of this technology lies in solving the industry challenge of poor stability in perovskite materials. Through innovative interface engineering and encapsulation technology, the lifespan of battery modules has been extended to over 25 years, meeting the needs of commercial applications. At the same time, the new technology has reduced production costs, potentially further lowering solar power generation costs by 15%-20%.</p>
+      <p>FC-T anode has multiple technical advantages: long service life, extrusion molding avoids porosity and cold shuts from casting, greatly enhancing conductivity and durability. Rapid deposition rate, high density improves conductivity, reduces cell voltage, energy saving and environmental protection. Improved yield rate, prevents uneven distribution of alloy components causing uneven anodic conductivity.</p>
       
-      <p>Dr. Li, the company's Chief Technology Officer, stated: "This breakthrough marks an important step for us in the renewable energy field. We plan to achieve mass production within the next 12 months, contributing to the global clean energy transition."</p>
+      <p>This product has greater strength, higher density enhances strength, can manufacture 10-meter-long anodes that do not elongate due to gravity during use. Service life reaches 3-5 years, saves about 30% of electricity consumption, achieving fundamental improvement in environmental protection. Using high-purity lead-tin-antimony (with a small amount of silver) as raw materials, tin content 3-10%, antimony content 2-3%, silver content 0.5-1%.</p>
       
-      <p>Industry experts evaluate that this technology will significantly enhance the economics of photovoltaic power generation, accelerate the process of grid parity, and is of great significance for promoting China's energy structure adjustment and achieving carbon peak and carbon neutrality goals.</p>
+      <p>Compared to traditional casting processes, FC-T anode solves the problems of traditional electroplating hard chromium anodes that have been using lead-antimony or lead-tin-antimony metal casting processes for many years, avoiding defects such as loose internal metallographic structure, cold shuts, cast nodules, shrinkage cavities and oxide inclusions, greatly improving product quality and performance.</p>
     `,
     image: '/images/news/news2.jpg',
-    date: '2023-10-28',
+    date: '2024-02-28',
     authorZh: '李强',
     authorEn: 'Li Qiang',
-    slug: 'new-solar-cell-technology'
+    slug: 'fct-anode-mass-production'
   },
   {
     id: 3,
-    titleZh: '能源行业数字化转型白皮书发布',
-    titleEn: 'Energy Industry Digital Transformation White Paper Released',
-    summaryZh: '白皮书分析了能源行业数字化转型趋势，提出了未来五年的发展路径。',
-    summaryEn: 'The white paper analyzes digital transformation trends in the energy industry and proposes development pathways for the next five years.',
+    titleZh: '陶瓷净化系统实现镀液永久循环利用，环保技术再创新高',
+    titleEn: 'Ceramic Purification System Achieves Permanent Plating Solution Recycling, Environmental Technology Reaches New Heights',
+    summaryZh: '我司独立开发陶瓷净化系统，实现镀铬溶液金属残渣净化技术，使溶液能够永久重复使用。',
+    summaryEn: 'Our company independently developed ceramic purification system, achieving metal residue purification technology in chrome plating solutions, allowing permanent solution reuse.',
     contentZh: `
-      <p>日前，中国能源研究会联合多家行业龙头企业共同发布《能源行业数字化转型白皮书(2023)》。白皮书全面分析了能源行业数字化转型的现状、挑战和未来趋势，为行业企业提供了重要参考。</p>
+      <p>近日，东莞晶晶表面技术有限公司宣布独立开发陶瓷净化系统获得重大突破，成功实现镀铬溶液中金属残渣净化技术，使溶液能够永久重复使用，而不是每3-5年更换一次，大大降低了镀铬企业的原材料成本和化学品对环境造成的损害。</p>
       
-      <p>白皮书指出，数字技术正深刻改变能源行业的生产方式和商业模式。人工智能、大数据、物联网等技术在能源生产、输送、存储、消费全链条的应用，正显著提升能源系统效率，降低运营成本，增强系统安全性和可靠性。</p>
+      <p>陶瓷净化系统可解决镀铬过程中产生的三价铬过高、铜离子铁离子累积导致的品质问题，实现镀液的循环利用。该系统具有多项技术优势：提高产品品质，解决镀铬过程中产生的三价铬过高、铜离子铁离子累积导致的品质问题；环境保护，解决镀液在金属离子累积到一定程度时无法生产导致报废的问题。</p>
       
-      <p>同时，白皮书也指出当前能源行业数字化转型面临标准不统一、数据孤岛、网络安全等挑战。针对这些问题，白皮书提出了构建开放共享的能源数据生态、建立统一的行业标准体系、强化网络安全保障等建议。</p>
+      <p>三价铬还原功能：电解过程中可以还原一部分三价铬，解决三价铬过高导致的问题。电解陶瓷隔膜具有优异的物理化学性能，在镀液中不被腐蚀。通过电解作用将杂质阳离子通过陶瓷隔膜毛细孔传输到陶瓷隔膜筒内（阴极区），实现粗化液和镀铬液的净化，延长镀液使用寿命。</p>
       
-      <p>白皮书预测，到2028年，我国能源行业数字化转型将进入深度融合阶段，能源互联网将实现规模化应用，虚拟电厂、需求侧响应等新模式将广泛普及，为构建清洁低碳、安全高效的能源体系提供有力支撑。</p>
+      <p>技术参数：阳极与阴极表面积比例为2:1，电压4-10V，温度50℃，运行时间3小时以上。电解液成分为铬酸50g/L，硫酸10g/L。该技术的成功应用标志着公司在环保技术方面取得重大突破，为行业绿色发展提供了重要技术支撑。</p>
     `,
     contentEn: `
-      <p>Recently, the China Energy Research Association, together with several industry-leading enterprises, jointly released the "Energy Industry Digital Transformation White Paper (2023)." The white paper comprehensively analyzes the current status, challenges, and future trends of digital transformation in the energy industry, providing important references for industry enterprises.</p>
+      <p>Recently, Dongguan Jingjing Surface Technology Co., Ltd. announced a major breakthrough in the independent development of ceramic purification system, successfully achieving metal residue purification technology in chrome plating solutions, allowing the solution to be reused forever instead of being replaced every 3-5 years, greatly reducing the raw material costs of chrome plating enterprises and the environmental damage caused by chemicals.</p>
       
-      <p>The white paper points out that digital technology is profoundly changing the production methods and business models of the energy industry. The application of technologies such as artificial intelligence, big data, and the Internet of Things across the entire chain of energy production, transmission, storage, and consumption is significantly improving energy system efficiency, reducing operating costs, and enhancing system security and reliability.</p>
+      <p>The ceramic purification system can solve quality problems caused by excessive trivalent chromium and accumulation of copper and iron ions during the chrome plating process, achieving recycling of plating solutions. This system has multiple technical advantages: enhanced product quality, addressing quality issues caused by excessive trivalent chromium and accumulation of copper and iron ions during chrome plating; environmental protection, solving the problem of plating liquids being discarded due to metal ion accumulation.</p>
       
-      <p>At the same time, the white paper also highlights challenges currently faced in the digital transformation of the energy industry, including non-uniform standards, data silos, and cybersecurity issues. In response to these problems, the white paper proposes recommendations such as building an open and shared energy data ecosystem, establishing a unified industry standard system, and strengthening cybersecurity guarantees.</p>
+      <p>Trivalent chromium reduction function: the electrolytic process can reduce a portion of trivalent chromium, addressing issues caused by excessive levels. The electrolytic ceramic diaphragm has excellent physicochemical properties and is not corroded in the plating solution. Through electrolysis, impurity cations are transported through ceramic diaphragm capillary pores into the ceramic diaphragm barrel (cathode area), achieving purification of roughening liquid and chrome plating solution, extending plating solution service life.</p>
       
-      <p>The white paper predicts that by 2028, China's energy industry digital transformation will enter a stage of deep integration, the energy internet will achieve large-scale application, and new models such as virtual power plants and demand-side response will become widespread, providing strong support for building a clean, low-carbon, safe, and efficient energy system.</p>
+      <p>Technical parameters: anode to cathode surface area ratio is 2:1, voltage 4-10V, temperature 50℃, running time more than 3 hours. Electrolyte composition: chromic acid 50g/L, sulfuric acid 10g/L. The successful application of this technology marks a major breakthrough in the company's environmental technology, providing important technical support for green development in the industry.</p>
     `,
     image: '/images/news/news3.jpg',
-    date: '2023-09-20',
+    date: '2024-03-20',
     authorZh: '王晓峰',
     authorEn: 'Wang Xiaofeng',
-    slug: 'energy-digital-transformation-whitepaper'
+    slug: 'ceramic-purification-system-breakthrough'
   }
 ];

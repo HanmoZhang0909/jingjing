@@ -298,8 +298,8 @@ const translations: Record<string, Record<Language, string>> = {
     en: 'Dongguan Jingjing New Materials Co., Ltd.',
   },
   'home.companyDescription': {
-    zh: '成立于2004年，专注于金属表面处理行业的领先企业。我们专注于镀铬技术研发、化工产品生产销售、镀铬设备及配件制造。开发了新型高效的微裂纹硬铬催化剂中间体DX-30（产品编号ST-930），在节能环保方面具有突出优势，广泛应用于电子、汽车、家电、医疗仪器等各领域。',
-    en: 'Established in 2004, we are a leading enterprise specializing in the metal surface treatment industry. We focus on chrome plating technology R&D, chemical product production and sales, chrome plating equipment and accessories manufacturing. We have developed a new and efficient micro crack hard chromium catalyst intermediate DX-30 (Product No. ST-930), which has outstanding advantages in energy saving and environmental protection, and is widely used in electronics, automotive, home appliances, medical instruments and other fields.',
+    zh: '成立于2004年，专注于金属表面处理行业的领先企业。我们专注于镀铬技术研发、化工产品生产销售、镀铬设备及配件制造。开发了新型高效的微裂纹硬铬催化剂中间体DX-30（产品编号ST-930），电流效率提升25%-27%，沉积速度是传统技术的两倍。2021年成立金属材料制造部，专业制造FC-T高密度挤压合金阳极，使用寿命达3-5年，节省约30%的电力消耗。',
+    en: 'Established in 2004, we are a leading enterprise specializing in the metal surface treatment industry. We focus on chrome plating technology R&D, chemical product production and sales, chrome plating equipment and accessories manufacturing. We have developed a new and efficient micro crack hard chromium catalyst intermediate DX-30 (Product No. ST-930), improving current efficiency by 25%-27%, with deposition speed twice that of traditional technology. In 2021, we established the Metal Materials Manufacturing Department, specializing in FC-T high-density extruded alloy anode manufacturing, with service life reaching 3-5 years and saving about 30% of electricity consumption.',
   },
   'home.learnMore': {
     zh: '了解更多',
@@ -322,8 +322,8 @@ const translations: Record<string, Record<Language, string>> = {
     en: 'Advanced Technology',
   },
   'home.advancedTechnologyDesc': {
-    zh: '采用大吨位挤压设备，从传统铸造工艺转向挤压成型工艺，大幅提升导电性和使用寿命',
-    en: 'Using large tonnage extrusion equipment, transitioning from traditional casting process to extrusion forming process, greatly improving conductivity and service life',
+    zh: 'DX-30技术电流效率提升25%-27%，沉积速度是传统技术的两倍。FC-T阳极采用800吨挤压机挤压成型，使用寿命达3-5年，导电性提升30%',
+    en: 'DX-30 technology improves current efficiency by 25%-27%, deposition speed is twice that of traditional technology. FC-T anode uses 800-ton press extrusion molding, service life reaches 3-5 years, conductivity improved by 30%',
   },
   'home.qualityControl': {
     zh: '品控流程',
@@ -338,8 +338,8 @@ const translations: Record<string, Record<Language, string>> = {
     en: 'Professional Service',
   },
   'home.professionalServiceDesc': {
-    zh: '独立开发镀铬溶液中金属残渣净化技术，实现溶液永久重复使用，大幅降低原材料成本',
-    en: 'Independently developed metal residue purification technology in chrome plating solutions, achieving permanent solution reuse and significantly reducing raw material costs',
+    zh: '独立开发镀铬溶液中金属残渣净化技术，实现溶液永久重复使用，而不是每3-5年更换一次，大大降低原材料成本和环境损害',
+    en: 'Independently developed metal residue purification technology in chrome plating solutions, achieving permanent solution reuse instead of replacement every 3-5 years, greatly reducing raw material costs and environmental damage',
   },
   'home.companyProfile': {
     zh: '公司简介',
@@ -350,8 +350,8 @@ const translations: Record<string, Record<Language, string>> = {
     en: 'Company Profile',
   },
   'home.companyProfileDesc': {
-    zh: '东莞晶晶表面技术有限公司成立于2004年，专注于金属表面处理行业的领先企业。我们专注于镀铬技术研发、化工产品生产销售、镀铬设备及配件制造。开发了新型高效的微裂纹硬铬催化剂中间体DX-30（产品编号ST-930），在节能环保方面具有突出优势。2021年成立金属材料制造部（东莞晶晶新材料有限公司），专业制造镀铬阳极，采用大吨位挤压设备，从传统铸造工艺转向挤压成型工艺，大幅提升导电性和使用寿命。',
-    en: 'Dongguan Jingjing Surface Technology Co., Ltd. was established in 2004, focusing on the metal surface treatment industry as a leading enterprise. We focus on chrome plating technology R&D, chemical product production and sales, chrome plating equipment and accessories manufacturing. We have developed a new and efficient micro crack hard chromium catalyst intermediate DX-30 (Product No. ST-930), which has outstanding advantages in energy saving and environmental protection. In 2021, we established the Metal Materials Manufacturing Department (Dongguan Jingjing New Materials Co., Ltd.), specializing in chrome plating anode manufacturing, using large tonnage extrusion equipment, transitioning from traditional casting process to extrusion forming process, greatly improving conductivity and service life.',
+    zh: '东莞晶晶表面技术有限公司成立于2004年，专注于金属表面处理行业的领先企业。我们专注于镀铬技术研发、化工产品生产销售、镀铬设备及配件制造。开发了新型高效的微裂纹硬铬催化剂中间体DX-30（产品编号ST-930），电流效率提升25%-27%，沉积速度是传统技术的两倍。2021年成立金属材料制造部（东莞晶晶新材料有限公司），专业制造FC-T高密度挤压合金阳极，使用寿命达3-5年，节省约30%的电力消耗。我们独立开发了镀铬溶液中金属残渣净化技术，实现溶液永久重复使用。',
+    en: 'Dongguan Jingjing Surface Technology Co., Ltd. was established in 2004, focusing on the metal surface treatment industry as a leading enterprise. We focus on chrome plating technology R&D, chemical product production and sales, chrome plating equipment and accessories manufacturing. We have developed a new and efficient micro crack hard chromium catalyst intermediate DX-30 (Product No. ST-930), improving current efficiency by 25%-27%, with deposition speed twice that of traditional technology. In 2021, we established the Metal Materials Manufacturing Department (Dongguan Jingjing New Materials Co., Ltd.), specializing in FC-T high-density extruded alloy anode manufacturing, with service life reaching 3-5 years and saving about 30% of electricity consumption. We have independently developed metal residue purification technology in chrome plating solutions, achieving permanent solution reuse.',
   },
   'home.viewMore': {
     zh: '查看更多',
@@ -362,16 +362,16 @@ const translations: Record<string, Record<Language, string>> = {
     en: 'Latest News',
   },
   'home.news1': {
-    zh: '东莞晶晶表面技术有限公司成功开发DX-30微裂纹硬铬催化剂',
-    en: 'Dongguan Jingjing Surface Technology Co., Ltd. Successfully Developed DX-30 Micro Crack Hard Chromium Catalyst',
+    zh: 'DX-30微裂纹硬铬催化剂中间体技术突破，电流效率提升至60%',
+    en: 'DX-30 Micro Crack Hard Chromium Catalyst Intermediate Technology Breakthrough, Current Efficiency Improved to 60%',
   },
   'home.news2': {
-    zh: '我司独立开发镀铬溶液金属残渣净化技术获得重大突破',
-    en: 'Our Company\'s Independent Development of Metal Residue Purification Technology in Chrome Plating Solutions Achieves Major Breakthrough',
+    zh: 'FC-T高密度挤压合金阳极成功量产，使用寿命延长至5年',
+    en: 'FC-T High-Density Extruded Alloy Anode Successfully Mass Produced, Service Life Extended to 5 Years',
   },
   'home.news3': {
-    zh: '金属表面处理行业环保技术发展白皮书发布',
-    en: 'Environmental Technology Development White Paper for Metal Surface Treatment Industry Released',
+    zh: '陶瓷净化系统实现镀液永久循环利用，环保技术再创新高',
+    en: 'Ceramic Purification System Achieves Permanent Plating Solution Recycling, Environmental Technology Reaches New Heights',
   },
   'home.readMore': {
     zh: '阅读更多',

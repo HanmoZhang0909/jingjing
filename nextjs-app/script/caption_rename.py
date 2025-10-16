@@ -8,7 +8,7 @@ from PIL import Image   # 用来获取图片像素大小
 client = OpenAI()
 
 # 需要处理的文件夹路径
-IMAGE_FOLDER = r"C:\Users\zhang\Downloads\Downloads\独立站图片素材\英文"
+IMAGE_FOLDER = r"C:\Users\zhang\Downloads\Downloads\独立站图片素材\Gemini_Generated_Image_home_cover.png"
 
 # 清理描述字符串 -> 合法文件名
 def sanitize_filename(text, max_length=80):
