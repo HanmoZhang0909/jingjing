@@ -184,7 +184,7 @@ export default function ProductsPage() {
             'Purification effect': 'Achieves purification of roughening liquid and chrome plating solution'
           }
         },
-        image: '/独立站图片素材/Industrial_surface_technology_equipment_522x800.jpg'
+        image: '/独立站图片素材/Laboratory_setup_with_chemistry_papers_and_glassware_1024x683.jpg'
       }
     ],
     technicalAdvantages: {

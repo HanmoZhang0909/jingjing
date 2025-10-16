@@ -66,13 +66,17 @@ export default function Navbar() {
                   whileTap={{ scale: 0.95 }}
                 >
                   <Link href="/" className="flex items-center">
-                    <motion.img 
-                      src="/独立站图片素材/Red_and_white_logo_with_stylized_letter_N_200x157.png" 
-                      alt="晶晶表面技术Logo" 
-                      className="w-8 h-8 mr-2 flex-shrink-0"
+                    <motion.div
+                      className="w-8 h-8 mr-2 flex-shrink-0 relative"
                       whileHover={{ rotate: 360 }}
                       transition={{ duration: 0.6 }}
-                    />
+                    >
+                      <img 
+                        src="/独立站图片素材/Red_and_white_logo_with_stylized_letter_N_200x157.png" 
+                        alt="晶晶表面技术Logo" 
+                        className="w-full h-full object-contain"
+                      />
+                    </motion.div>
                     <span className={`font-bold whitespace-nowrap ${language === 'en' ? 'text-sm lg:text-base' : 'text-lg'}`}>{t('site.name')}</span>
                   </Link>
                 </motion.div>

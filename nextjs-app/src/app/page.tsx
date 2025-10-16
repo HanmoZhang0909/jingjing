@@ -7,7 +7,7 @@ import Link from "next/link";
 import { motion } from 'framer-motion';
 
 export default function Home() {
-  const { language, setLanguage, t } = useLanguage();
+  const { t } = useLanguage();
 
   return (
     <div className="flex flex-col">
