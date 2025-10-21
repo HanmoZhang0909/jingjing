@@ -58,8 +58,9 @@ export default function FloatingLanguageSwitcher() {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           animate={{ 
-            rotate: isExpanded ? 180 : 0,
-            backgroundColor: isExpanded ? "#1d4ed8" : "#2563eb"
+            scale: isExpanded ? 1.05 : 1,
+            backgroundColor: isExpanded ? "#1d4ed8" : "#2563eb",
+            boxShadow: isExpanded ? "0 8px 25px rgba(37, 99, 235, 0.4)" : "0 4px 15px rgba(37, 99, 235, 0.2)"
           }}
           transition={{ duration: 0.3 }}
         >

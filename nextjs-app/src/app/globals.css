@@ -27,6 +27,8 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-noto-sans-sc), sans-serif;
+  font-size: 1.25rem; /* 20px - 比之前18px再大一号 */
+  line-height: 1.6;
 }
 
 @layer utilities {
@@ -35,15 +37,15 @@ body {
   }
   
   .heading-1 {
-    @apply text-4xl font-bold mb-4;
+    @apply text-5xl font-bold mb-4; /* 从4xl升级到5xl */
   }
   
   .heading-2 {
-    @apply text-3xl font-bold mb-3;
+    @apply text-4xl font-bold mb-3; /* 从3xl升级到4xl */
   }
   
   .heading-3 {
-    @apply text-2xl font-bold mb-2;
+    @apply text-3xl font-bold mb-2; /* 从2xl升级到3xl */
   }
   
   .btn-primary {

@@ -142,7 +142,7 @@ export const newsArticles: NewsArticle[] = [
       
       <p>The company plans to promote this process to all production lines within the next year, expecting to reduce heavy metal emissions by 50 tons annually and save 300,000 cubic meters of water, making important contributions to environmental protection.</p>
     `,
-    image: '/独立站图片素材/Red_and_white_logo_with_stylized_letter_N_200x157.png',
+    image: '/独立站图片素材/jingjing_logo_blue.jpg',
     date: '2025-04-10',
     authorZh: '张含墨',
     authorEn: 'Hanmo Zhang',

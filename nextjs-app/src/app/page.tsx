@@ -152,17 +152,29 @@ export default function Home() {
           }}
         >
           <div className="flex flex-col items-center text-white">
-            <span className="text-sm mb-2">向下滚动</span>
+            <span className="text-sm mb-2">{t('home.scrollDown')}</span>
             <motion.div
-              animate={{ y: [0, 10, 0] }}
+              animate={{ y: [0, 8, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
-              className="w-6 h-10 border-2 border-white rounded-full flex justify-center"
+              className="flex justify-center"
             >
-              <motion.div
-                animate={{ y: [0, 12, 0] }}
-                transition={{ duration: 2, repeat: Infinity }}
-                className="w-1 h-3 bg-white rounded-full mt-2"
-              />
+              <svg 
+                width="24" 
+                height="24" 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                className="text-white"
+              >
+                <motion.path
+                  d="M7 10L12 15L17 10"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  animate={{ y: [0, 4, 0] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                />
+              </svg>
             </motion.div>
           </div>
         </motion.div>

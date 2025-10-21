@@ -32,20 +32,48 @@ export default function Navbar() {
     return (
       <nav className="bg-blue-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex items-center">
-                <div className="flex-shrink-0">
-                  <div className="flex items-center">
-                    <Image 
-                      src="/独立站图片素材/Red_and_white_logo_with_stylized_letter_N_200x157.png" 
-                      alt="晶晶表面技术Logo" 
-                      width={32}
-                      height={32}
-                      className="w-8 h-8 mr-2"
-                    />
-                    <span className="text-lg font-bold">东莞晶晶新材料有限公司</span>
-                  </div>
-                </div>
+          <div className="flex items-center h-16">
+            {/* 左侧区域 - Logo居中 */}
+            <div className="flex-1 flex justify-center lg:justify-start">
+              <div className="flex items-center">
+                <Image 
+                  src="/独立站图片素材/jingjing_logo_blue.jpg" 
+                  alt="晶晶表面技术Logo" 
+                  width={32}
+                  height={32}
+                  className="w-8 h-8 mr-2"
+                />
+                <span className="text-xl font-bold">东莞晶晶新材料有限公司</span>
+              </div>
+            </div>
+
+            {/* 中间区域 - 导航菜单 */}
+            <div className="hidden lg:flex flex-1 justify-center lg:ml-8">
+              <div className="flex items-center space-x-6">
+                {navItems.map((item, index) => (
+                  <Link 
+                    key={item.path}
+                    href={item.path}
+                    className={`px-4 py-2 text-base font-medium transition-colors duration-300 rounded-md whitespace-nowrap ${
+                      pathname === item.path
+                        ? 'text-white font-bold bg-blue-800/50'
+                        : 'text-gray-300 hover:text-white hover:bg-blue-800/30'
+                    }`}
+                  >
+                    {t(item.nameKey)}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* 右侧区域 - 移动端菜单按钮 */}
+            <div className="flex-1 flex justify-end lg:hidden">
+              <button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400">
+                <span className="sr-only">打开主菜单</span>
+                <svg className="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
             </div>
           </div>
         </div>
@@ -61,56 +89,62 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <div className="flex items-center flex-1 min-w-0">
-              <div className="flex-shrink-0">
+        <div className="flex items-center h-16">
+          {/* 左侧区域 - Logo居中 */}
+          <div className="flex-1 flex justify-center lg:justify-start">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Link href="/" className="flex items-center">
                 <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  className="w-8 h-8 mr-2 flex-shrink-0 relative"
+                  whileHover={{ 
+                    scale: 1.1,
+                    boxShadow: "0 4px 12px rgba(59, 130, 246, 0.3)"
+                  }}
+                  transition={{ duration: 0.3, ease: "easeOut" }}
                 >
-                  <Link href="/" className="flex items-center">
-                    <motion.div
-                      className="w-8 h-8 mr-2 flex-shrink-0 relative"
-                      whileHover={{ rotate: 360 }}
-                      transition={{ duration: 0.6 }}
-                    >
-                      <Image 
-                        src="/独立站图片素材/Red_and_white_logo_with_stylized_letter_N_200x157.png" 
-                        alt="晶晶表面技术Logo" 
-                        width={200}
-                        height={157}
-                        className="w-full h-full object-contain"
-                      />
-                    </motion.div>
-                    <span className={`font-bold whitespace-nowrap ${language === 'en' ? 'text-sm lg:text-base' : 'text-lg'}`}>{t('site.name')}</span>
+                  <Image 
+                    src="/独立站图片素材/jingjing_logo_blue.jpg" 
+                    alt="晶晶表面技术Logo" 
+                    width={200}
+                    height={157}
+                    className="w-full h-full object-contain"
+                  />
+                </motion.div>
+                <span className={`font-bold whitespace-nowrap ${language === 'en' ? 'text-base lg:text-lg' : 'text-xl'}`}>{t('site.name')}</span>
+              </Link>
+            </motion.div>
+          </div>
+
+          {/* 中间区域 - 导航菜单 */}
+          <div className="hidden lg:flex flex-1 justify-center lg:ml-8">
+            <div className="flex items-center space-x-6">
+              {navItems.map((item, index) => (
+                <motion.div
+                  key={item.path}
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                >
+                  <Link 
+                    href={item.path}
+                    className={`px-4 py-2 text-base font-medium transition-colors duration-300 rounded-md whitespace-nowrap ${
+                      pathname === item.path
+                        ? 'text-white font-bold bg-blue-800/50'
+                        : 'text-gray-300 hover:text-white hover:bg-blue-800/30'
+                    }`}
+                  >
+                    {t(item.nameKey)}
                   </Link>
                 </motion.div>
-              </div>
-            <div className="hidden lg:block ml-4">
-              <div className="flex items-baseline space-x-3">
-                {navItems.map((item, index) => (
-                  <motion.div
-                    key={item.path}
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4, delay: index * 0.1 }}
-                  >
-                    <Link 
-                      href={item.path}
-                      className={`px-3 py-2 text-sm font-medium transition-colors duration-300 ${
-                        pathname === item.path
-                          ? 'text-white font-bold'
-                          : 'text-gray-300 hover:text-white'
-                      }`}
-                    >
-                      {t(item.nameKey)}
-                    </Link>
-                  </motion.div>
-                ))}
-              </div>
+              ))}
             </div>
           </div>
-          <div className="-mr-2 flex lg:hidden">
+
+          {/* 右侧区域 - 移动端菜单按钮 */}
+          <div className="flex-1 flex justify-end lg:hidden">
             <motion.button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-blue-800 focus:outline-none"
@@ -177,7 +211,7 @@ export default function Navbar() {
                 >
                   <Link
                     href={item.path}
-                    className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300 ${
+                    className={`block px-3 py-2 rounded-md text-lg font-medium transition-colors duration-300 ${
                       pathname === item.path
                         ? 'bg-blue-800 text-white'
                         : 'text-gray-300 hover:bg-blue-800 hover:text-white'

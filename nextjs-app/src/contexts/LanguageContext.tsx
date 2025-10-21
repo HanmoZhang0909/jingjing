@@ -385,6 +385,10 @@ const translations: Record<string, Record<Language, string>> = {
     zh: '查看更多',
     en: 'View More',
   },
+  'home.scrollDown': {
+    zh: '向下滚动',
+    en: 'Scroll Down',
+  },
   'home.latestNews': {
     zh: '最新资讯',
     en: 'Latest News',
