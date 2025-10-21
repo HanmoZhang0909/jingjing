@@ -16,7 +16,7 @@ export default function MapComponent({ className = "w-full h-96" }: MapComponent
     const initMap = () => {
       if (typeof window !== 'undefined' && window.AMap && mapRef.current) {
         // 公司地址坐标 (东莞市石碣镇横滘向阳街2号楼101室)
-        const companyLocation = [113.812, 23.098]; // 东莞市石碣镇的大概坐标
+        const companyLocation: [number, number] = [113.812, 23.098]; // 东莞市石碣镇的大概坐标
         
         // 创建地图实例
         const map = new window.AMap.Map(mapRef.current, {
@@ -106,14 +106,49 @@ export default function MapComponent({ className = "w-full h-96" }: MapComponent
   );
 }
 
+// 高德地图API类型定义
+interface AMapMapOptions {
+  zoom?: number;
+  center?: [number, number];
+  mapStyle?: string;
+}
+
+interface AMapMarkerOptions {
+  position: [number, number];
+  title?: string;
+}
+
+interface AMapInfoWindowOptions {
+  content: string;
+  offset?: AMapPixel;
+}
+
+interface AMapPixel {
+  x: number;
+  y: number;
+}
+
+interface AMapMap {
+  add: (marker: AMapMarker) => void;
+}
+
+interface AMapMarker {
+  on: (event: string, callback: () => void) => void;
+  getPosition: () => [number, number];
+}
+
+interface AMapInfoWindow {
+  open: (map: AMapMap, position: [number, number]) => void;
+}
+
 // 扩展Window接口以包含AMap
 declare global {
   interface Window {
     AMap: {
-      Map: new (container: HTMLElement, options: any) => any;
-      Marker: new (options: any) => any;
-      InfoWindow: new (options: any) => any;
-      Pixel: new (x: number, y: number) => any;
+      Map: new (container: HTMLElement, options: AMapMapOptions) => AMapMap;
+      Marker: new (options: AMapMarkerOptions) => AMapMarker;
+      InfoWindow: new (options: AMapInfoWindowOptions) => AMapInfoWindow;
+      Pixel: new (x: number, y: number) => AMapPixel;
     };
   }
 }
