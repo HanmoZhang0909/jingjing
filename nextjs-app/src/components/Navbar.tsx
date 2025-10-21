@@ -50,7 +50,7 @@ export default function Navbar() {
             {/* 中间区域 - 导航菜单 */}
             <div className="hidden lg:flex flex-1 justify-center lg:ml-8">
               <div className="flex items-center space-x-6">
-                {navItems.map((item, index) => (
+                {navItems.map((item) => (
                   <Link 
                     key={item.path}
                     href={item.path}
