@@ -19,6 +19,9 @@ interface NewsArticle {
   authorZh: string;
   authorEn: string;
   slug: string;
+  category: string;
+  tags: string[];
+  readTime: number;
 }
 
 interface NewsDetailClientProps {
@@ -70,12 +73,22 @@ export default function NewsDetailClient({ article, relatedArticles }: NewsDetai
           </Link>
         </div>
 
+        {/* 分类标签 */}
+        <div className="mb-4">
+          <span className="inline-block bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
+            {t(`news.category.${localizedArticle.category}`)}
+          </span>
+        </div>
+
         {/* 标题和元信息 */}
         <h1 className="text-3xl md:text-4xl font-bold mb-4">{localizedArticle.title}</h1>
         
-        <div className="flex items-center text-gray-600 mb-8">
-          <span className="mr-4">{formattedDate}</span>
-          <span className="mr-4">{t('news.detail.author')}: {localizedArticle.author}</span>
+        <div className="flex flex-wrap items-center text-gray-600 mb-8 gap-4">
+          <span>{formattedDate}</span>
+          <span>•</span>
+          <span>{t('news.detail.author')}: {localizedArticle.author}</span>
+          <span>•</span>
+          <span>{localizedArticle.readTime} {t('news.detail.readTime')}</span>
         </div>
 
         {/* 特色图片 */}
@@ -99,6 +112,23 @@ export default function NewsDetailClient({ article, relatedArticles }: NewsDetai
           className="prose prose-lg max-w-none"
           dangerouslySetInnerHTML={{ __html: localizedArticle.content }}
         />
+
+        {/* 标签 */}
+        <div className="mt-8 pt-6 border-t">
+          <h3 className="text-lg font-medium mb-4">
+            {t('news.detail.tags')}
+          </h3>
+          <div className="flex flex-wrap gap-2">
+            {localizedArticle.tags.map((tag, index) => (
+              <span 
+                key={index}
+                className="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full hover:bg-gray-200 transition-colors"
+              >
+                #{tag}
+              </span>
+            ))}
+          </div>
+        </div>
 
         {/* 分享按钮 */}
         <div className="mt-12 border-t pt-6">

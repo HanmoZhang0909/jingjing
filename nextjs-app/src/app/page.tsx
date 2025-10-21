@@ -1,28 +1,113 @@
 "use client";
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 export default function Home() {
   const { t } = useLanguage();
+  const [scrollY, setScrollY] = useState(0);
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  // 监听滚动事件
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // 计算背景图片的透明度和缩放
+  const backgroundOpacity = Math.max(0, 1 - scrollY / 800);
+  const backgroundScale = 1 + scrollY * 0.0005;
+  const textOpacity = Math.max(0, 1 - scrollY / 600);
+  const textY = scrollY * 0.5;
 
   return (
     <div className="flex flex-col">
-      {/* 主页横幅 */}
-      <div className="relative h-[300px] sm:h-[400px] lg:h-[600px] xl:h-[800px] 2xl:h-[1000px] bg-gray-900 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/70 to-transparent z-10"></div>
+      {/* 主页横幅 - 固定背景 */}
+      <div className="relative h-screen bg-gray-900 overflow-hidden">
+        {/* 背景加载动画层 */}
+        {!imageLoaded && (
+          <motion.div 
+            className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-800 to-gray-900"
+            initial={{ opacity: 1 }}
+            animate={{ opacity: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+          >
+            {/* 加载动画 */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <motion.div
+                className="w-16 h-16 border-4 border-white/20 border-t-white rounded-full"
+                animate={{ rotate: 360 }}
+                transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+              />
+            </div>
+          </motion.div>
+        )}
+
+        {/* 背景图片层 */}
+        <motion.div 
+          className="absolute inset-0"
+          style={{
+            opacity: imageLoaded ? backgroundOpacity : 0,
+            scale: imageLoaded ? backgroundScale : 1.1,
+          }}
+          initial={{ opacity: 0, scale: 1.1 }}
+          animate={{ 
+            opacity: imageLoaded ? 1 : 0, 
+            scale: imageLoaded ? 1 : 1.1 
+          }}
+          transition={{ 
+            duration: 1.2, 
+            ease: "easeOut",
+            delay: imageLoaded ? 0 : 0.3
+          }}
+        >
+          <Image 
+            src="/独立站图片素材/Gemini_Generated_Image_sqh6cusqh6cusqh6.png" 
+            alt="东莞晶晶新材料有限公司"
+            fill
+            style={{objectFit: "cover"}}
+            quality={90}
+            priority
+            onLoad={() => setImageLoaded(true)}
+          />
+        </motion.div>
+
+        {/* 背景图片加载完成后的淡入效果 */}
+        <motion.div 
+          className="absolute inset-0 bg-gradient-to-r from-blue-900/70 via-blue-900/30 to-transparent"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: imageLoaded ? 1 : 0 }}
+          transition={{ duration: 0.8, delay: imageLoaded ? 0.5 : 0 }}
+        />
+
+        {/* 渐变遮罩层 */}
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/70 via-blue-900/30 to-transparent z-10"></div>
+        
+        {/* 内容层 */}
         <motion.div 
           className="absolute inset-0 flex items-center z-20"
+          style={{
+            opacity: imageLoaded ? textOpacity : 0,
+            y: imageLoaded ? textY : 50,
+          }}
           initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          animate={{ 
+            opacity: imageLoaded ? 1 : 0, 
+            y: imageLoaded ? 0 : 50 
+          }}
+          transition={{ 
+            duration: 1, 
+            ease: "easeOut",
+            delay: imageLoaded ? 0.8 : 0
+          }}
         >
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <motion.h2 
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 leading-tight"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -30,7 +115,7 @@ export default function Home() {
               {t('home.companyName')}
             </motion.h2>
             <motion.p 
-              className="text-white text-sm sm:text-base md:text-lg max-w-2xl mb-4 sm:mb-6 leading-relaxed"
+              className="text-white text-base sm:text-lg md:text-xl max-w-3xl mb-6 sm:mb-8 leading-relaxed"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -38,34 +123,48 @@ export default function Home() {
               {t('home.companyDescription')}
             </motion.p>
             <motion.div 
-              className="flex flex-col sm:flex-row gap-3 sm:gap-4"
+              className="flex flex-col sm:flex-row gap-4 sm:gap-6"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              <Link href="/about" className="bg-blue-600 hover:bg-blue-700 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full transition-all duration-300 hover:scale-105 text-center text-sm sm:text-base">
+              <Link href="/about" className="bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full transition-all duration-300 hover:scale-105 text-center text-base sm:text-lg font-medium">
                 {t('home.learnMore')}
               </Link>
-              <Link href="/contact" className="border border-white text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-white/10 transition-all duration-300 hover:scale-105 text-center text-sm sm:text-base">
+              <Link href="/contact" className="border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:bg-white/10 transition-all duration-300 hover:scale-105 text-center text-base sm:text-lg font-medium">
                 {t('home.contactUs')}
               </Link>
             </motion.div>
           </div>
         </motion.div>
+
+        {/* 滚动指示器 */}
         <motion.div 
-          className="absolute inset-0"
-          initial={{ scale: 1.1, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1.2, ease: "easeOut" }}
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ 
+            opacity: imageLoaded ? 1 : 0, 
+            y: imageLoaded ? 0 : 20 
+          }}
+          transition={{ 
+            duration: 0.8, 
+            delay: imageLoaded ? 1.5 : 0 
+          }}
         >
-          <Image 
-            src="/独立站图片素材/Gemini_Generated_Image_home_cover_1344x768.png" 
-            alt="晶晶表面技术公司"
-            fill
-            style={{objectFit: "cover"}}
-            quality={90}
-            priority
-          />
+          <div className="flex flex-col items-center text-white">
+            <span className="text-sm mb-2">向下滚动</span>
+            <motion.div
+              animate={{ y: [0, 10, 0] }}
+              transition={{ duration: 2, repeat: Infinity }}
+              className="w-6 h-10 border-2 border-white rounded-full flex justify-center"
+            >
+              <motion.div
+                animate={{ y: [0, 12, 0] }}
+                transition={{ duration: 2, repeat: Infinity }}
+                className="w-1 h-3 bg-white rounded-full mt-2"
+              />
+            </motion.div>
+          </div>
         </motion.div>
       </div>
 

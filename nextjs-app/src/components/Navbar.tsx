@@ -40,7 +40,7 @@ export default function Navbar() {
                       alt="晶晶表面技术Logo" 
                       className="w-8 h-8 mr-2"
                     />
-                    <span className="text-lg font-bold">东莞晶晶表面技术有限公司</span>
+                    <span className="text-lg font-bold">东莞晶晶新材料有限公司</span>
                   </div>
                 </div>
             </div>

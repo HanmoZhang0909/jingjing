@@ -11,24 +11,24 @@ export default function Footer() {
   const newsItems = [
     {
       id: 1,
-      titleZh: '东莞晶晶表面技术有限公司成功开发DX-30微裂纹硬铬催化剂',
-      titleEn: 'Dongguan Jingjing Surface Technology Successfully Develops DX-30 Micro Crack Hard Chromium Catalyst',
-      date: '2023-11-15',
-      slug: 'dx-30-micro-crack-catalyst'
+      titleZh: 'DX-30微裂纹硬铬催化剂中间体技术突破，电流效率提升至60%',
+      titleEn: 'DX-30 Micro Crack Hard Chromium Catalyst Intermediate Technology Breakthrough, Current Efficiency Improved to 60%',
+      date: '2025-10-15',
+      slug: 'dx30-technology-breakthrough'
     },
     {
       id: 2,
-      titleZh: '我司独立开发镀铬溶液金属残渣净化技术获得重大突破',
-      titleEn: 'Our Company Achieves Major Breakthrough in Independent Development of Chromium Plating Solution Metal Residue Purification Technology',
-      date: '2023-10-28',
-      slug: 'chromium-solution-purification-technology'
+      titleZh: 'FC-T高密度挤压合金阳极成功量产，使用寿命延长至5年',
+      titleEn: 'FC-T High-Density Extruded Alloy Anode Successfully Mass Produced, Service Life Extended to 5 Years',
+      date: '2025-08-20',
+      slug: 'fct-anode-mass-production'
     },
     {
       id: 3,
-      titleZh: '金属表面处理行业环保技术发展白皮书发布',
-      titleEn: 'White Paper on Environmental Technology Development in Metal Surface Treatment Industry Released',
-      date: '2023-09-20',
-      slug: 'metal-surface-treatment-environmental-technology-whitepaper'
+      titleZh: '陶瓷净化系统实现镀液永久循环利用，环保技术再创新高',
+      titleEn: 'Ceramic Purification System Achieves Permanent Plating Solution Recycling, Environmental Technology Reaches New Heights',
+      date: '2025-06-15',
+      slug: 'ceramic-purification-system-breakthrough'
     }
   ];
 
@@ -56,20 +56,20 @@ export default function Footer() {
       en: 'Address: '
     },
     addressValue: {
-      zh: '广东省东莞市石碣镇科技中路64号昌盛工业园',
-      en: 'Changsheng Industrial Park, No. 64, Science and Technology Middle Road, Shijie Town, Dongguan City, Guangdong Province, China'
+      zh: '广东省东莞市石碣镇横滘向阳街2号楼101室',
+      en: 'Room 101, Building 2, No. 2, Xiangyang Street, Hengjiao, Shijie Town, Dongguan City, Guangdong Province, China'
     },
     phone: {
       zh: '联系电话：',
       en: 'Phone: '
     },
-    usOffice: {
-      zh: '美国分公司地址：',
-      en: 'US Office Address: '
+    contactPerson: {
+      zh: '联系人：',
+      en: 'Contact Person: '
     },
-    usPhone: {
-      zh: '美国联系电话：',
-      en: 'US Phone: '
+    contactPersonValue: {
+      zh: '张宗寿',
+      en: 'Tristan Zhang'
     },
     email: {
       zh: '联系邮箱：',
@@ -96,8 +96,8 @@ export default function Footer() {
       en: 'Send'
     },
     copyright: {
-      zh: '© ' + new Date().getFullYear() + ' 东莞晶晶表面技术有限公司 版权所有',
-      en: '© ' + new Date().getFullYear() + ' Dongguan Jingjing Surface Technology Co., Ltd. All Rights Reserved.'
+      zh: '© ' + new Date().getFullYear() + ' 东莞晶晶新材料有限公司 版权所有',
+      en: '© ' + new Date().getFullYear() + ' Dongguan Jingjing New Materials Co., Ltd. All Rights Reserved.'
     }
   };
 
@@ -147,10 +147,9 @@ export default function Footer() {
             <ul className="space-y-2 text-gray-300">
               {[
                 { label: footerTranslations.companyAddress[language], value: footerTranslations.addressValue[language] },
-                { label: footerTranslations.phone[language], value: "0769-8888-8888" },
-                { label: footerTranslations.usOffice[language], value: "305 Inglewood ave, La Verne, CA 91750, USA" },
-                { label: footerTranslations.usPhone[language], value: "+1 626-606-6126" },
-                { label: footerTranslations.email[language], value: "contact@jingjing-surface.com" }
+                { label: footerTranslations.contactPerson[language], value: footerTranslations.contactPersonValue[language] },
+                { label: footerTranslations.phone[language], value: "13790181730" },
+                { label: footerTranslations.email[language], value: "jingjing@gmail.com" }
               ].map((item, index) => (
                 <motion.li 
                   key={index}

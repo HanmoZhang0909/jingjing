@@ -1,10 +1,205 @@
 ---
-description:
+description: 东莞晶晶表面技术有限公司全栈项目开发规则
 globs:
+  - "nestjs-api/**/*"
+  - "nextjs-app/**/*"
+  - "docker-compose.yml"
+  - "nginx.conf"
 alwaysApply: true
 ---
 
-# Your rule content
+# 东莞晶晶表面技术有限公司 - 全栈项目开发规则
 
-- You can @ files here
-- You can use markdown but dont have to
+## 项目架构概述
+- **后端**: NestJS API (TypeScript + MySQL + JWT认证)
+- **前端**: Next.js 15 (React 19 + Tailwind CSS + 多语言支持)
+- **部署**: Docker容器化 + Nginx反向代理
+- **数据库**: MySQL 8.0
+
+## NestJS API 开发规范
+
+### 项目结构
+```
+nestjs-api/src/
+├── app/
+│   ├── auth/           # 认证模块 (JWT + Passport)
+│   ├── users/          # 用户管理模块
+│   ├── entities/       # 数据库实体
+│   └── core/           # 核心功能 (过滤器、服务等)
+├── main.ts            # 应用入口
+└── app.module.ts      # 根模块
+```
+
+### 开发规范
+- 使用 **TypeORM** 进行数据库操作，实体文件放在 `app/entities/`
+- 认证使用 **JWT + Passport**，相关代码在 `app/auth/`
+- 所有模块遵循 NestJS 标准结构：`*.module.ts`, `*.controller.ts`, `*.service.ts`
+- DTO 文件统一放在各模块的 `dto/` 目录下
+- 使用 **class-validator** 和 **class-transformer** 进行数据验证
+- 环境变量配置通过 `@nestjs/config` 管理
+- 生产环境关闭 TypeORM 自动同步 (`synchronize: false`)
+
+### 数据库配置
+- 默认端口: 3307 (开发环境)
+- 生产环境端口: 3306 (Docker)
+- 数据库名: `jingjing_db`
+- 用户: `jingjing`
+
+## Next.js 前端开发规范
+
+### 项目结构
+```
+nextjs-app/src/
+├── app/               # App Router 页面
+│   ├── about/         # 关于我们
+│   ├── cases/         # 案例展示
+│   ├── contact/       # 联系我们
+│   ├── news/          # 新闻动态
+│   └── products/      # 产品展示
+├── components/        # 可复用组件
+├── contexts/          # React Context
+├── data/             # 静态数据
+└── config/           # 配置文件
+```
+
+### 开发规范
+- 使用 **App Router** 架构 (Next.js 13+)
+- 样式使用 **Tailwind CSS**，配置文件在根目录
+- 多语言支持通过 `LanguageContext` 实现
+- 动画使用 **Framer Motion**
+- 组件命名使用 **PascalCase**
+- 页面文件统一命名为 `page.tsx`
+- 动态路由使用 `[slug]` 格式
+
+### 多语言支持
+- 支持中文 (zh-CN) 和英文 (en)
+- 语言切换组件: `FloatingLanguageSwitcher`
+- 语言状态管理: `LanguageContext`
+
+## Docker 部署规范
+
+### 服务配置
+- **前端**: 端口 3000，环境变量 `NEXT_PUBLIC_API_URL`
+- **后端**: 端口 3001，连接 MySQL 数据库
+- **数据库**: MySQL 8.0，端口 3306
+- **Nginx**: 端口 80/443，SSL 证书支持
+
+### 环境变量
+```bash
+# 后端环境变量
+DB_HOST=mysql
+DB_PORT=3306
+DB_USERNAME=jingjing
+DB_PASSWORD=jingjing2024!
+DB_DATABASE=jingjing_db
+JWT_SECRET=jingjing_jwt_secret_2024_very_secure_key
+
+# 前端环境变量
+NEXT_PUBLIC_API_URL=http://localhost:3001
+```
+
+## 开发工作流
+
+### 本地开发
+```bash
+# 后端开发
+cd nestjs-api
+npm run start:dev
+
+# 前端开发
+cd nextjs-app
+npm run dev
+```
+
+### 生产部署
+```bash
+# 使用 Docker Compose
+docker-compose up -d
+
+# 或使用部署脚本
+./deploy.sh
+```
+
+## 代码质量规范
+
+### TypeScript
+- 严格模式启用
+- 使用接口定义数据结构
+- 避免使用 `any` 类型
+
+### ESLint & Prettier
+- 两个项目都配置了 ESLint
+- 使用 Prettier 进行代码格式化
+- 提交前运行 `npm run lint`
+
+### 测试
+- NestJS 使用 Jest 进行单元测试
+- 测试文件命名: `*.spec.ts`
+- 覆盖率要求: 80%+
+
+## 安全规范
+
+### 认证与授权
+- JWT Token 过期时间合理设置
+- 密码使用 bcryptjs 加密
+- API 路由使用 AuthGuard 保护
+
+### 数据验证
+- 所有输入数据使用 DTO 验证
+- 防止 SQL 注入 (TypeORM 参数化查询)
+- XSS 防护 (React 自动转义)
+
+### 部署安全
+- 生产环境使用 HTTPS
+- 敏感信息通过环境变量管理
+- 数据库连接使用专用用户
+
+## 性能优化
+
+### 前端优化
+- 使用 Next.js 自动代码分割
+- 图片优化使用 Next.js Image 组件
+- 静态资源缓存策略
+
+### 后端优化
+- 数据库查询优化
+- 使用连接池
+- 适当的缓存策略
+
+### Nginx 优化
+- 静态文件缓存 (1年)
+- Gzip 压缩
+- HTTP/2 支持
+
+## 业务特定规范
+
+### 公司信息
+- 公司名称: 东莞晶晶表面技术有限公司
+- 主营业务: 金属表面处理、镀铬技术、化工产品
+- 网站域名: www.jingjinggddg.com
+
+### 内容管理
+- 产品展示页面支持动态路由
+- 新闻系统支持分类和详情页
+- 案例展示支持图片和描述
+- 联系页面包含公司信息和表单
+
+## 常用命令参考
+
+```bash
+# 项目启动
+docker-compose up -d
+
+# 查看日志
+docker-compose logs -f [service_name]
+
+# 重新构建
+docker-compose up -d --build
+
+# 数据库备份
+docker exec mysql mysqldump -u jingjing -p jingjing_db > backup.sql
+
+# 代码格式化
+npm run format  # NestJS
+npm run lint    # Next.js
+```

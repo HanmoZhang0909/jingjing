@@ -24,7 +24,7 @@ export default function AboutPage() {
       en: 'ABOUT US'
     },
     intro: {
-      zh: '东莞晶晶表面技术有限公司成立于2004年，专注于金属表面处理行业的领先企业。我们专注于镀铬技术研发、化工产品生产销售、镀铬设备及配件制造。开发了新型高效的微裂纹硬铬催化剂中间体DX-30（产品编号ST-930），在节能环保方面具有突出优势。2021年成立金属材料制造部（东莞晶晶新材料有限公司），专业制造镀铬阳极，采用大吨位挤压设备，从传统铸造工艺转向挤压成型工艺，大幅提升导电性和使用寿命。我们独立开发了镀铬溶液中金属残渣净化技术，使溶液能够永久重复使用，而不是每3-5年更换一次，大大降低了镀铬企业的原材料成本和化学品对环境造成的损害。',
+      zh: '东莞晶晶新材料有限公司成立于2004年，专注于金属表面处理行业的领先企业。我们专注于镀铬技术研发、化工产品生产销售、镀铬设备及配件制造。开发了新型高效的微裂纹硬铬催化剂中间体DX-30（产品编号ST-930），在节能环保方面具有突出优势。2021年成立金属材料制造部，专业制造镀铬阳极，采用大吨位挤压设备，从传统铸造工艺转向挤压成型工艺，大幅提升导电性和使用寿命。我们独立开发了镀铬溶液中金属残渣净化技术，使溶液能够永久重复使用，而不是每3-5年更换一次，大大降低了镀铬企业的原材料成本和化学品对环境造成的损害。',
       en: 'Dongguan Jingjing Surface Technology Co., Ltd. was established in 2004. It is a leading enterprise specializing in the metal surface treatment industry, focusing on the research and development of chrome plating technology, the production and sales of chemical products, chrome plating equipment and accessories. We have developed a new and more effective micro crack hard chromium catalyst intermediate DX-30, which is a high-purity product and named as product number ST-930. In 2021, we established the Metal Materials Manufacturing Department (Dongguan Jingjing New Materials Co., Ltd.), specializing in the manufacturing of anodes for chrome plating. On the basis of traditional casting and drawing forming technologies, we introduced large tonnage extrusion equipment, which changed from years of casting process to extrusion forming process, greatly improving the conductivity and service life of chrome plating anodes. We have independently developed metal residue purification technology in chromium plating solutions, allowing the solution to be reused forever instead of being replaced every 3-5 years, greatly reducing the raw material costs of chrome plating enterprises and the environmental damage caused by chemicals.'
     },
     history: {
@@ -43,7 +43,7 @@ export default function AboutPage() {
       milestones: [
         {
           year: '2004',
-          eventZh: '东莞晶晶表面技术有限公司成立，专注于金属表面处理行业',
+          eventZh: '东莞晶晶新材料有限公司成立，专注于金属表面处理行业',
           eventEn: 'Dongguan Jingjing Surface Technology Co., Ltd. established, focusing on metal surface treatment industry'
         },
         {

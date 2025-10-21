@@ -19,7 +19,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 const translations: Record<string, Record<Language, string>> = {
   // 通用
   'site.name': {
-    zh: '东莞晶晶表面技术有限公司',
+    zh: '东莞晶晶新材料有限公司',
     en: 'Dongguan Jingjing New Materials Co., Ltd.',
   },
   'nav.home': {
@@ -68,32 +68,32 @@ const translations: Record<string, Record<Language, string>> = {
     en: 'Address',
   },
   'contact.address.value': {
-    zh: '广东省东莞市石碣镇科技中路64号昌盛工业园',
-    en: 'Changsheng Industrial Park, No. 64, Science and Technology Middle Road, Shijie Town, Dongguan City, Guangdong Province, China',
+    zh: '广东省东莞市石碣镇横滘向阳街2号楼101室',
+    en: 'Room 101, Building 2, No. 2, Xiangyang Street, Hengjiao, Shijie Town, Dongguan City, Guangdong Province, China',
   },
   'contact.phone.title': {
     zh: '联系电话',
     en: 'Phone',
   },
   'contact.phone.sales': {
-    zh: '销售热线: 0769-8888-8888',
-    en: 'Sales: 0769-8888-8888',
+    zh: '13790181730',
+    en: '13790181730',
   },
   'contact.phone.support': {
-    zh: '技术支持: 0769-9999-9999',
-    en: 'Technical Support: 0769-9999-9999',
+    zh: '张宗寿',
+    en: 'Tristan Zhang',
   },
   'contact.email.title': {
     zh: '电子邮箱',
     en: 'Email',
   },
   'contact.email.sales': {
-    zh: 'sales@jingjing-surface.com (销售咨询)',
-    en: 'sales@jingjing-surface.com (Sales Inquiry)',
+    zh: 'jingjing@gmail.com',
+    en: 'jingjing@gmail.com',
   },
   'contact.email.support': {
-    zh: 'support@jingjing-surface.com (技术支持)',
-    en: 'support@jingjing-surface.com (Technical Support)',
+    zh: '联系人',
+    en: 'Contact Person',
   },
   'contact.hours.title': {
     zh: '工作时间',
@@ -225,6 +225,34 @@ const translations: Record<string, Record<Language, string>> = {
     zh: '相关阅读',
     en: 'Related Articles',
   },
+  'news.detail.tags': {
+    zh: '标签',
+    en: 'Tags',
+  },
+  'news.detail.readTime': {
+    zh: '分钟阅读',
+    en: 'min read',
+  },
+  'news.category.tech': {
+    zh: '技术突破',
+    en: 'Technology Breakthrough',
+  },
+  'news.category.product': {
+    zh: '产品发布',
+    en: 'Product Launch',
+  },
+  'news.category.environmental': {
+    zh: '环保技术',
+    en: 'Environmental Technology',
+  },
+  'news.category.exhibition': {
+    zh: '展会活动',
+    en: 'Exhibition & Events',
+  },
+  'news.category.cooperation': {
+    zh: '商务合作',
+    en: 'Business Cooperation',
+  },
   
   // 案例页面
   'cases.title': {
@@ -294,7 +322,7 @@ const translations: Record<string, Record<Language, string>> = {
   
   // 首页内容
   'home.companyName': {
-    zh: '东莞晶晶表面技术有限公司',
+    zh: '东莞晶晶新材料有限公司',
     en: 'Dongguan Jingjing New Materials Co., Ltd.',
   },
   'home.companyDescription': {
@@ -350,8 +378,8 @@ const translations: Record<string, Record<Language, string>> = {
     en: 'Company Profile',
   },
   'home.companyProfileDesc': {
-    zh: '东莞晶晶表面技术有限公司成立于2004年，专注于金属表面处理行业的领先企业。我们专注于镀铬技术研发、化工产品生产销售、镀铬设备及配件制造。开发了新型高效的微裂纹硬铬催化剂中间体DX-30（产品编号ST-930），电流效率提升25%-27%，沉积速度是传统技术的两倍。2021年成立金属材料制造部（东莞晶晶新材料有限公司），专业制造FC-T高密度挤压合金阳极，使用寿命达3-5年，节省约30%的电力消耗。我们独立开发了镀铬溶液中金属残渣净化技术，实现溶液永久重复使用。',
-    en: 'Dongguan Jingjing Surface Technology Co., Ltd. was established in 2004, focusing on the metal surface treatment industry as a leading enterprise. We focus on chrome plating technology R&D, chemical product production and sales, chrome plating equipment and accessories manufacturing. We have developed a new and efficient micro crack hard chromium catalyst intermediate DX-30 (Product No. ST-930), improving current efficiency by 25%-27%, with deposition speed twice that of traditional technology. In 2021, we established the Metal Materials Manufacturing Department (Dongguan Jingjing New Materials Co., Ltd.), specializing in FC-T high-density extruded alloy anode manufacturing, with service life reaching 3-5 years and saving about 30% of electricity consumption. We have independently developed metal residue purification technology in chrome plating solutions, achieving permanent solution reuse.',
+    zh: '东莞晶晶新材料有限公司成立于2004年，专注于金属表面处理行业的领先企业。我们专注于镀铬技术研发、化工产品生产销售、镀铬设备及配件制造。开发了新型高效的微裂纹硬铬催化剂中间体DX-30（产品编号ST-930），电流效率提升25%-27%，沉积速度是传统技术的两倍。2021年成立金属材料制造部，专业制造FC-T高密度挤压合金阳极，使用寿命达3-5年，节省约30%的电力消耗。我们独立开发了镀铬溶液中金属残渣净化技术，实现溶液永久重复使用。',
+    en: 'Dongguan Jingjing New Materials Co., Ltd. was established in 2004, focusing on the metal surface treatment industry as a leading enterprise. We focus on chrome plating technology R&D, chemical product production and sales, chrome plating equipment and accessories manufacturing. We have developed a new and efficient micro crack hard chromium catalyst intermediate DX-30 (Product No. ST-930), improving current efficiency by 25%-27%, with deposition speed twice that of traditional technology. In 2021, we established the Metal Materials Manufacturing Department, specializing in FC-T high-density extruded alloy anode manufacturing, with service life reaching 3-5 years and saving about 30% of electricity consumption. We have independently developed metal residue purification technology in chrome plating solutions, achieving permanent solution reuse.',
   },
   'home.viewMore': {
     zh: '查看更多',

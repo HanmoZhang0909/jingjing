@@ -15,8 +15,8 @@ const notoSansSC = Noto_Sans_SC({
 });
 
 export const metadata: Metadata = {
-  title: "东莞晶晶表面技术有限公司",
-  description: "东莞晶晶表面技术有限公司 - 专注于金属表面处理行业的领先企业，专业从事镀铬技术研发、化工产品生产销售、镀铬设备及配件制造",
+  title: "东莞晶晶新材料有限公司",
+  description: "东莞晶晶新材料有限公司 - 专注于金属表面处理行业的领先企业，专业从事镀铬技术研发、化工产品生产销售、镀铬设备及配件制造",
 };
 
 export default function RootLayout({
