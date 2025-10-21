@@ -82,8 +82,9 @@ export default function MapComponent({ className = "w-full h-96" }: MapComponent
 
     return () => {
       // 清理函数
-      if (mapRef.current) {
-        mapRef.current.innerHTML = '';
+      const currentMapRef = mapRef.current;
+      if (currentMapRef) {
+        currentMapRef.innerHTML = '';
       }
     };
   }, [language]);
@@ -108,6 +109,11 @@ export default function MapComponent({ className = "w-full h-96" }: MapComponent
 // 扩展Window接口以包含AMap
 declare global {
   interface Window {
-    AMap: any;
+    AMap: {
+      Map: new (container: HTMLElement, options: any) => any;
+      Marker: new (options: any) => any;
+      InfoWindow: new (options: any) => any;
+      Pixel: new (x: number, y: number) => any;
+    };
   }
 }

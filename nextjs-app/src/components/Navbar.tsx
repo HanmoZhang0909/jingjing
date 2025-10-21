@@ -1,6 +1,7 @@
 "use client";
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -35,9 +36,11 @@ export default function Navbar() {
             <div className="flex items-center">
                 <div className="flex-shrink-0">
                   <div className="flex items-center">
-                    <img 
+                    <Image 
                       src="/独立站图片素材/Red_and_white_logo_with_stylized_letter_N_200x157.png" 
                       alt="晶晶表面技术Logo" 
+                      width={32}
+                      height={32}
                       className="w-8 h-8 mr-2"
                     />
                     <span className="text-lg font-bold">东莞晶晶新材料有限公司</span>
@@ -71,9 +74,11 @@ export default function Navbar() {
                       whileHover={{ rotate: 360 }}
                       transition={{ duration: 0.6 }}
                     >
-                      <img 
+                      <Image 
                         src="/独立站图片素材/Red_and_white_logo_with_stylized_letter_N_200x157.png" 
                         alt="晶晶表面技术Logo" 
+                        width={200}
+                        height={157}
                         className="w-full h-full object-contain"
                       />
                     </motion.div>
