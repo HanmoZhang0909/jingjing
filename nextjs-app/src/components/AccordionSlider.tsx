@@ -65,22 +65,16 @@ const AccordionSlider: React.FC = () => {
     const slides = slidesRef.current;
     if (!slides.length) return;
 
-    console.log('点击板块:', index, '当前激活:', activeIndex);
-
     // 完全停止所有动画
     gsap.killTweensOf(slides);
 
-    // 记录当前激活的板块索引
-    const previousActiveIndex = activeIndex;
+    // 设置新的激活板块
     setActiveIndex(index);
-    
-    console.log('设置新激活板块:', index);
     
     // 处理新激活的板块 - 展开动画
     const activeSlide = slides[index];
     if (activeSlide) {
       activeSlide.classList.add('active');
-      console.log('开始展开动画:', index);
       gsap.to(activeSlide, { 
         duration: 0.8, 
         flex: 2.5, 
@@ -100,7 +94,7 @@ const AccordionSlider: React.FC = () => {
         });
       }
     });
-  }, [activeIndex]);
+  }, []);
 
   useEffect(() => {
     const slides = slidesRef.current;
@@ -127,7 +121,7 @@ const AccordionSlider: React.FC = () => {
         gsap.killTweensOf(slide);
       });
     };
-  }, []); // 移除handleSlideClick依赖，避免重复初始化
+  }, [handleSlideClick]);
 
   return (
     <div className="w-full h-full max-w-none">
