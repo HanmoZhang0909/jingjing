@@ -5,6 +5,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from 'framer-motion';
+import AccordionSlider from '@/components/AccordionSlider';
 
 export default function Home() {
   const { t } = useLanguage();
@@ -76,6 +77,7 @@ export default function Home() {
           />
         </motion.div>
 
+
         {/* 背景图片加载完成后的淡入效果 */}
         <motion.div 
           className="absolute inset-0 bg-gradient-to-r from-blue-900/70 via-blue-900/30 to-transparent"
@@ -106,35 +108,70 @@ export default function Home() {
           }}
         >
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.h2 
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              {t('home.companyName')}
-            </motion.h2>
-            <motion.p 
-              className="text-white text-base sm:text-lg md:text-xl max-w-3xl mb-6 sm:mb-8 leading-relaxed"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              {t('home.companyDescription')}
-            </motion.p>
-            <motion.div 
-              className="flex flex-col sm:flex-row gap-4 sm:gap-6"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-            >
-              <Link href="/about" className="bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full transition-all duration-300 hover:scale-105 text-center text-base sm:text-lg font-medium">
-                {t('home.learnMore')}
-              </Link>
-              <Link href="/contact" className="border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:bg-white/10 transition-all duration-300 hover:scale-105 text-center text-base sm:text-lg font-medium">
-                {t('home.contactUs')}
-              </Link>
-            </motion.div>
+            <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+              {/* 左侧文字内容 */}
+              <div className="flex-1">
+                <motion.h2 
+                  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                >
+                  {t('home.companyName')}
+                </motion.h2>
+                <motion.p 
+                  className="text-white text-base sm:text-lg md:text-xl max-w-3xl mb-6 sm:mb-8 leading-relaxed"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.4 }}
+                >
+                  {t('home.companyDescription')}
+                </motion.p>
+                <motion.div 
+                  className="flex flex-col sm:flex-row gap-4 sm:gap-6"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.6 }}
+                >
+                  <Link href="/about" className="bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full transition-all duration-300 hover:scale-105 text-center text-base sm:text-lg font-medium">
+                    {t('home.learnMore')}
+                  </Link>
+                  <Link href="/contact" className="border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:bg-white/10 transition-all duration-300 hover:scale-105 text-center text-base sm:text-lg font-medium">
+                    {t('home.contactUs')}
+                  </Link>
+                </motion.div>
+              </div>
+
+              {/* 右侧视频组件 */}
+              <motion.div 
+                className="w-full lg:w-1/2 max-w-lg"
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 1.0 }}
+              >
+                <div className="relative bg-white/10 backdrop-blur-sm rounded-lg p-4 shadow-2xl border border-white/20">
+                  <div className="aspect-video rounded-lg overflow-hidden">
+                    <video
+                      className="w-full h-full object-cover"
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      preload="auto"
+                      onLoadStart={() => console.log('视频开始加载')}
+                      onCanPlay={() => console.log('视频可以播放')}
+                      onError={(e) => console.error('视频加载错误:', e)}
+                    >
+                      <source src="/videos/homepagevideo.mp4" type="video/mp4" />
+                      您的浏览器不支持视频播放。
+                    </video>
+                  </div>
+                  <div className="absolute top-2 right-2">
+                    <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </motion.div>
 
@@ -180,84 +217,21 @@ export default function Home() {
         </motion.div>
       </div>
 
-      {/* 我们的优势 */}
-      <section className="py-8 sm:py-12 lg:py-16 bg-gray-100">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-2">{t('home.ourAdvantages')}</h2>
-            <p className="text-center text-red-600 mb-8 sm:mb-12 text-sm sm:text-base">{t('home.ourAdvantagesSubtitle')}</p>
-          </motion.div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {[
-              {
-                icon: (
-                  <svg className="w-10 h-10 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
-                  </svg>
-                ),
-                title: t('home.advancedTechnology'),
-                description: t('home.advancedTechnologyDesc')
-              },
-              {
-                icon: (
-                  <svg className="w-10 h-10 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                ),
-                title: t('home.qualityControl'),
-                description: t('home.qualityControlDesc')
-              },
-              {
-                icon: (
-                  <svg className="w-10 h-10 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z" clipRule="evenodd" />
-                  </svg>
-                ),
-                title: t('home.professionalService'),
-                description: t('home.professionalServiceDesc')
-              }
-            ].map((advantage, index) => (
-              <motion.div 
-                key={index}
-                className="flex flex-col items-center text-center p-4 sm:p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                viewport={{ once: true }}
-                whileHover={{ scale: 1.02, y: -2 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                <motion.div 
-                  className="w-16 h-16 sm:w-20 sm:h-20 bg-blue-100 rounded-full flex items-center justify-center mb-3 sm:mb-4"
-                  whileHover={{ rotate: 360 }}
-                  transition={{ duration: 0.6 }}
-                >
-                  {advantage.icon}
-                </motion.div>
-                <h3 className="text-lg sm:text-xl font-bold text-yellow-500 mb-2">{advantage.title}</h3>
-                <p className="text-gray-600 text-sm sm:text-base leading-relaxed">{advantage.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 公司简介 */}
-      <section className="py-8 sm:py-12 lg:py-16 bg-teal-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      {/* 关于我们 */}
+      <section className="relative py-8 sm:py-12 lg:py-16 bg-white overflow-hidden">
+        {/* 顶部渐变过渡层 - 从蓝色到白色 */}
+        <div className="absolute top-0 left-0 right-0 h-64 bg-gradient-to-b from-blue-900 to-white z-10"></div>
+        {/* 底部渐变过渡层 */}
+        <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-[#1e3a8a] to-transparent z-10"></div>
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
             <motion.div 
               className="w-full lg:w-1/2"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              transition={{ duration: 1, ease: "easeOut" }}
+              viewport={{ once: true, margin: "-100px" }}
             >
               <Image 
                 src="/独立站图片素材/Company_Profile.webp" 
@@ -271,10 +245,10 @@ export default function Home() {
               className="w-full lg:w-1/2"
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+              viewport={{ once: true, margin: "-100px" }}
             >
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-2">{t('home.companyProfile')}</h2>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-2">关于我们</h2>
               <p className="text-red-600 mb-4 sm:mb-6 text-sm sm:text-base">{t('home.companyProfileSubtitle')}</p>
               <p className="text-gray-700 mb-6 sm:mb-8 text-sm sm:text-base leading-relaxed">
                 {t('home.companyProfileDesc')}
@@ -292,6 +266,25 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 主营业务 */}
+      <section className="h-screen flex items-center justify-center relative" style={{ backgroundColor: '#1e3a8a' }}>
+        {/* 顶部渐变过渡层 */}
+        <div className="absolute top-0 left-0 right-0 h-64 bg-gradient-to-b from-transparent to-[#1e3a8a] z-10"></div>
+        
+        <motion.div
+          className="w-full h-full flex items-center justify-center relative z-20"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          <AccordionSlider />
+        </motion.div>
+      </section>
+
+      {/* 主营业务到最新资讯的过渡 */}
+      <div className="h-64 bg-gradient-to-b from-[#1e3a8a] to-white"></div>
+
       {/* 最新资讯 */}
       <section className="py-8 sm:py-12 lg:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -299,8 +292,8 @@ export default function Home() {
             className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8 sm:mb-10 text-center"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: true, margin: "-100px" }}
           >
             {t('home.latestNews')}
           </motion.h2>
@@ -324,8 +317,8 @@ export default function Home() {
                 className="border rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow bg-white"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: index * 0.15, ease: "easeOut" }}
+                viewport={{ once: true, margin: "-50px" }}
                 whileHover={{ y: -5, scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -342,14 +335,17 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 最新资讯到联系我们的过渡 */}
+      <div className="h-64 bg-gradient-to-b from-white to-gray-100"></div>
+
       {/* 联系我们（简化版，完整版在联系我们页面） */}
       <section className="py-8 sm:py-12 lg:py-16 bg-gray-100">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: true, margin: "-100px" }}
           >
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">{t('home.contactSection')}</h2>
             <p className="mb-6 sm:mb-8 text-gray-700 text-sm sm:text-base">{t('home.contactDesc')}</p>

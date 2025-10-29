@@ -9,6 +9,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
   const pathname = usePathname();
   const { t, language } = useLanguage();
   const [isMounted, setIsMounted] = useState(false);
@@ -18,6 +20,30 @@ export default function Navbar() {
     setIsMounted(true);
     console.log('Navbar mounted, current language:', language);
   }, [language]);
+
+  // 滚动检测逻辑
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      // 如果滚动距离小于100px，始终显示导航栏
+      if (currentScrollY < 100) {
+        setIsVisible(true);
+      } else {
+        // 向上滚动显示，向下滚动隐藏
+        if (currentScrollY < lastScrollY) {
+          setIsVisible(true);
+        } else {
+          setIsVisible(false);
+        }
+      }
+      
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
 
   const navItems = [
     { nameKey: 'nav.home', path: '/' },
@@ -83,10 +109,10 @@ export default function Navbar() {
 
   return (
     <motion.nav 
-      className="bg-blue-900 text-white"
+      className="bg-blue-900 text-white fixed top-0 left-0 right-0 z-50"
       initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+      animate={{ y: isVisible ? 0 : -100 }}
+      transition={{ duration: 0.3, ease: "easeInOut" }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center h-16">
