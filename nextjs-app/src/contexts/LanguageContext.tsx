@@ -421,6 +421,30 @@ const translations: Record<string, Record<Language, string>> = {
     zh: '立即咨询',
     en: 'Contact Now',
   },
+  'home.mainBusiness': {
+    zh: '主营业务',
+    en: 'Main Business',
+  },
+  'home.aboutUs': {
+    zh: '关于我们',
+    en: 'About Us',
+  },
+  'business.anode': {
+    zh: '阳极氧化',
+    en: 'Anode Oxidation',
+  },
+  'business.chemical': {
+    zh: '化学药水',
+    en: 'Chemical Solutions',
+  },
+  'business.equipment': {
+    zh: '处理设备',
+    en: 'Processing Equipment',
+  },
+  'business.learnMore': {
+    zh: '了解更多',
+    en: 'Learn More',
+  },
 };
 
 // Provider组件

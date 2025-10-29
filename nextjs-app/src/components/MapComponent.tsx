@@ -82,8 +82,9 @@ export default function MapComponent({ className = "w-full h-96" }: MapComponent
 
     return () => {
       // 清理函数
-      if (mapRef.current) {
-        mapRef.current.innerHTML = '';
+      const currentMapRef = mapRef.current;
+      if (currentMapRef) {
+        currentMapRef.innerHTML = '';
       }
     };
   }, [language]);

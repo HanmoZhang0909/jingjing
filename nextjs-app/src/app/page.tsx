@@ -166,9 +166,6 @@ export default function Home() {
                       您的浏览器不支持视频播放。
                     </video>
                   </div>
-                  <div className="absolute top-2 right-2">
-                    <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
-                  </div>
                 </div>
               </motion.div>
             </div>
@@ -248,7 +245,7 @@ export default function Home() {
               transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
               viewport={{ once: true, margin: "-100px" }}
             >
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-2">关于我们</h2>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-2">{t('home.aboutUs')}</h2>
               <p className="text-red-600 mb-4 sm:mb-6 text-sm sm:text-base">{t('home.companyProfileSubtitle')}</p>
               <p className="text-gray-700 mb-6 sm:mb-8 text-sm sm:text-base leading-relaxed">
                 {t('home.companyProfileDesc')}

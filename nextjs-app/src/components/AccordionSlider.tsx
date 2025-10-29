@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from 'react';
-import Image from 'next/image';
+import React, { useEffect, useRef, useState, useCallback } from 'react';
 import Link from 'next/link';
 import { gsap } from 'gsap';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 interface BusinessItem {
   id: number;
@@ -23,14 +23,15 @@ interface BusinessItem {
 }
 
 const AccordionSlider: React.FC = () => {
+  const { t } = useLanguage();
   const sliderRef = useRef<HTMLDivElement>(null);
   const slidesRef = useRef<HTMLDivElement[]>([]);
-  const [activeIndex, setActiveIndex] = useState<number>(-1);
+  const [activeIndex, setActiveIndex] = useState<number>(0); // 默认展开第一个板块
 
   const businessData: BusinessItem[] = [
     {
       id: 1,
-      title: "阳极氧化",
+      title: t('business.anode'),
       subtitle: "",
       description: "",
       image: "/独立站图片素材/Colorful_chemistry_lab_glassware_collection_1024x516.jpg",
@@ -40,7 +41,7 @@ const AccordionSlider: React.FC = () => {
     },
     {
       id: 2,
-      title: "化学药水",
+      title: t('business.chemical'),
       subtitle: "",
       description: "",
       image: "/独立站图片素材/Colorful_chemistry_lab_glassware_collection_1024x516.jpg",
@@ -50,7 +51,7 @@ const AccordionSlider: React.FC = () => {
     },
     {
       id: 3,
-      title: "处理设备",
+      title: t('business.equipment'),
       subtitle: "",
       description: "",
       image: "/独立站图片素材/Colorful_chemistry_lab_glassware_collection_1024x516.jpg",
@@ -60,14 +61,61 @@ const AccordionSlider: React.FC = () => {
     }
   ];
 
+  const handleSlideClick = useCallback((index: number) => {
+    const slides = slidesRef.current;
+    if (!slides.length) return;
+
+    console.log('点击板块:', index, '当前激活:', activeIndex);
+
+    // 完全停止所有动画
+    gsap.killTweensOf(slides);
+
+    // 记录当前激活的板块索引
+    const previousActiveIndex = activeIndex;
+    setActiveIndex(index);
+    
+    console.log('设置新激活板块:', index);
+    
+    // 处理新激活的板块 - 展开动画
+    const activeSlide = slides[index];
+    if (activeSlide) {
+      activeSlide.classList.add('active');
+      console.log('开始展开动画:', index);
+      gsap.to(activeSlide, { 
+        duration: 0.8, 
+        flex: 2.5, 
+        ease: "power2.out"
+      });
+    }
+
+    // 处理其他板块 - 压缩动画
+    slides.forEach((slide, i) => {
+      if (i !== index) {
+        slide.classList.remove('active');
+        gsap.to(slide, { 
+          duration: 0.8, 
+          flex: 0.5, 
+          ease: "power2.out",
+          delay: Math.abs(i - index) * 0.05
+        });
+      }
+    });
+  }, [activeIndex]);
+
   useEffect(() => {
     const slides = slidesRef.current;
     if (!slides.length) return;
 
-    // 初始化GSAP动画
+    // 初始化GSAP动画 - 确保状态正确
     slides.forEach((slide, index) => {
-      // 设置初始状态 - 默认均等分布
-      gsap.set(slide, { flex: 1 });
+      // 先设置初始状态
+      if (index === 0) {
+        slide.classList.add('active');
+        gsap.set(slide, { flex: 2.5 });
+      } else {
+        slide.classList.remove('active');
+        gsap.set(slide, { flex: 0.5 });
+      }
 
       // 点击事件
       slide.addEventListener('click', () => handleSlideClick(index));
@@ -76,40 +124,15 @@ const AccordionSlider: React.FC = () => {
     return () => {
       slides.forEach(slide => {
         slide.removeEventListener('click', () => {});
+        gsap.killTweensOf(slide);
       });
     };
-  }, []);
-
-  const handleSlideClick = (index: number) => {
-    const slides = slidesRef.current;
-    if (!slides.length) return;
-
-    if (activeIndex === index) {
-      // 如果点击的是当前激活的slide，则恢复到均等分布
-      setActiveIndex(-1);
-      slides.forEach(slide => {
-        slide.classList.remove('active');
-        gsap.to(slide, { duration: 0.8, flex: 1, ease: "power2.out" });
-      });
-    } else {
-      // 激活新的slide
-      setActiveIndex(index);
-      slides.forEach((slide, i) => {
-        if (i === index) {
-          slide.classList.add('active');
-          gsap.to(slide, { duration: 0.8, flex: 2.5, ease: "power2.out" });
-        } else {
-          slide.classList.remove('active');
-          gsap.to(slide, { duration: 0.8, flex: 0.5, ease: "power2.out" });
-        }
-      });
-    }
-  };
+  }, []); // 移除handleSlideClick依赖，避免重复初始化
 
   return (
     <div className="w-full h-full max-w-none">
       <div className="text-center mb-8">
-        <h2 className="text-4xl font-bold text-white">主营业务</h2>
+        <h2 className="text-4xl font-bold text-white">{t('home.mainBusiness')}</h2>
       </div>
 
       <div ref={sliderRef} className="relative h-[80vh] overflow-hidden rounded-2xl shadow-2xl">
@@ -118,7 +141,9 @@ const AccordionSlider: React.FC = () => {
             <div
               key={business.id}
               ref={el => { if (el) slidesRef.current[index] = el; }}
-              className="slide flex-1 relative cursor-pointer overflow-hidden"
+              className={`slide flex-1 relative cursor-pointer overflow-hidden ${
+                activeIndex === index ? 'z-10' : 'z-0'
+              }`}
               style={{
                 backgroundImage: `url(${business.image})`,
                 backgroundSize: 'cover',
@@ -132,7 +157,7 @@ const AccordionSlider: React.FC = () => {
               {/* 内容区域 */}
               <div className="slide-content absolute bottom-8 left-8 right-8 text-white z-10">
                 {/* 标题 */}
-                <div className="business-title text-2xl font-bold">
+                <div className="business-title text-2xl font-bold transition-all duration-300 ease-out hover:text-blue-300 hover:scale-110 hover:drop-shadow-lg">
                   {business.title}
                 </div>
                 
@@ -144,7 +169,7 @@ const AccordionSlider: React.FC = () => {
                       className="inline-flex items-center px-6 py-3 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full text-white hover:bg-white/30 transition-all duration-300 hover:scale-105"
                       onClick={(e) => e.stopPropagation()}
                     >
-                      了解更多
+                      {t('business.learnMore')}
                       <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
