@@ -11,12 +11,18 @@ export default function Home() {
   const { t } = useLanguage();
   const [scrollY, setScrollY] = useState(0);
   const [imageLoaded, setImageLoaded] = useState(false);
+  const [isClient, setIsClient] = useState(false);
 
   // 监听滚动事件
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // 客户端渲染检查
+  useEffect(() => {
+    setIsClient(true);
   }, []);
 
   // 计算背景图片的透明度和缩放
@@ -151,20 +157,26 @@ export default function Home() {
               >
                 <div className="relative bg-white/10 backdrop-blur-sm rounded-lg p-4 shadow-2xl border border-white/20">
                   <div className="aspect-video rounded-lg overflow-hidden">
-                    <video
-                      className="w-full h-full object-cover"
-                      autoPlay
-                      muted
-                      loop
-                      playsInline
-                      preload="auto"
-                      onLoadStart={() => console.log('视频开始加载')}
-                      onCanPlay={() => console.log('视频可以播放')}
-                      onError={(e) => console.error('视频加载错误:', e)}
-                    >
-                      <source src="/videos/homepagevideo.mp4" type="video/mp4" />
-                      您的浏览器不支持视频播放。
-                    </video>
+                    {isClient ? (
+                      <video
+                        className="w-full h-full object-cover"
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        preload="auto"
+                        onLoadStart={() => console.log('视频开始加载')}
+                        onCanPlay={() => console.log('视频可以播放')}
+                        onError={(e) => console.error('视频加载错误:', e)}
+                      >
+                        <source src="/videos/homepagevideo.mp4" type="video/mp4" />
+                        您的浏览器不支持视频播放。
+                      </video>
+                    ) : (
+                      <div className="w-full h-full bg-gray-200 flex items-center justify-center">
+                        <div className="text-gray-500">视频加载中...</div>
+                      </div>
+                    )}
                   </div>
                 </div>
               </motion.div>
