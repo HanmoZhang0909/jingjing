@@ -100,23 +100,28 @@ const AccordionSlider: React.FC = () => {
     const slides = slidesRef.current;
     if (!slides.length) return;
 
-    // 仅在激活索引变化时做过渡动画，初始渲染样式由 JSX 决定，避免水合不匹配
+    // 初始化GSAP动画 - 确保状态正确
     slides.forEach((slide, index) => {
-      if (index === activeIndex) {
+      // 先设置初始状态
+      if (index === 0) {
         slide.classList.add('active');
-        gsap.to(slide, { duration: 0.4, flex: 2.5, ease: 'power2.out' });
+        gsap.set(slide, { flex: 2.5 });
       } else {
         slide.classList.remove('active');
-        gsap.to(slide, { duration: 0.4, flex: 0.5, ease: 'power2.out' });
+        gsap.set(slide, { flex: 0.5 });
       }
+
+      // 点击事件
+      slide.addEventListener('click', () => handleSlideClick(index));
     });
 
     return () => {
       slides.forEach(slide => {
+        slide.removeEventListener('click', () => {});
         gsap.killTweensOf(slide);
       });
     };
-  }, [activeIndex]);
+  }, [handleSlideClick]);
 
   return (
     <div className="w-full h-full max-w-none">
@@ -137,11 +142,8 @@ const AccordionSlider: React.FC = () => {
                 backgroundImage: `url(${business.image})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                filter: activeIndex === index ? 'grayscale(0)' : 'grayscale(1)',
-                // 首次渲染即与状态一致，避免SSR/CSR不一致
-                flexGrow: activeIndex === index ? 2.5 : 0.5
+                filter: activeIndex === index ? 'grayscale(0)' : 'grayscale(1)'
               }}
-              onClick={() => handleSlideClick(index)}
             >
               {/* 背景遮罩 */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
