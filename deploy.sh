@@ -3,6 +3,9 @@
 # 部署脚本
 echo "🚀 开始部署 Jingjing 项目..."
 
+echo "从github拉取最新代码..."
+git pull origin main
+
 # 检查Docker是否运行
 if ! docker info > /dev/null 2>&1; then
     echo "❌ Docker未运行，请先启动Docker"
