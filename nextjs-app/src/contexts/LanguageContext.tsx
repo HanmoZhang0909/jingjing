@@ -378,7 +378,7 @@ const translations: Record<string, Record<Language, string>> = {
     en: 'Company Profile',
   },
   'home.companyProfileDesc': {
-    zh: '东莞晶晶新材料有限公司成立于2004年，专注于金属表面处理行业的领先企业。我们专注于镀铬技术研发、化工产品生产销售、镀铬设备及配件制造。开发了新型高效的微裂纹硬铬催化剂中间体DX-30（产品编号ST-930），电流效率提升25%-27%，沉积速度是传统技术的两倍。2021年成立金属材料制造部，专业制造FC-T高密度挤压合金阳极，使用寿命达3-5年，节省约30%的电力消耗。我们独立开发了镀铬溶液中金属残渣净化技术，实现溶液永久重复使用。',
+    zh: '成立于2004年，是一家专注于金属表面处理技术服务的领先企业。我们专注于镀铬技术研发、化工产品生产销售、镀铬设备及配件制造。开发了新型高效的微裂纹硬铬催化剂中间体DX-30，电流效率提升25%-27%，沉积速度是传统技术的两倍。2021年成立金属材料制造部，专业制造高密度挤压合金阳极，使用寿命达3-5年，节省约20%的电力消耗。',
     en: 'Dongguan Jingjing New Materials Co., Ltd. was established in 2004, focusing on the metal surface treatment industry as a leading enterprise. We focus on chrome plating technology R&D, chemical product production and sales, chrome plating equipment and accessories manufacturing. We have developed a new and efficient micro crack hard chromium catalyst intermediate DX-30 (Product No. ST-930), improving current efficiency by 25%-27%, with deposition speed twice that of traditional technology. In 2021, we established the Metal Materials Manufacturing Department, specializing in FC-T high-density extruded alloy anode manufacturing, with service life reaching 3-5 years and saving about 30% of electricity consumption. We have independently developed metal residue purification technology in chrome plating solutions, achieving permanent solution reuse.',
   },
   'home.viewMore': {
