@@ -184,7 +184,7 @@ export default function Footer() {
                 <input 
                   type="text" 
                   placeholder={footerTranslations.namePlaceholder[language]} 
-                  className="w-full p-2 sm:p-3 bg-gray-700 text-white border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 text-sm sm:text-base"
+                  className="w-full p-2 sm:p-3 bg-gray-700 text-white border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-300 text-sm sm:text-base"
                 />
               </motion.div>
               <motion.div
@@ -196,7 +196,7 @@ export default function Footer() {
                 <input 
                   type="email" 
                   placeholder={footerTranslations.emailPlaceholder[language]} 
-                  className="w-full p-2 sm:p-3 bg-gray-700 text-white border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 text-sm sm:text-base"
+                  className="w-full p-2 sm:p-3 bg-gray-700 text-white border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-300 text-sm sm:text-base"
                 />
               </motion.div>
               <motion.div
@@ -208,12 +208,12 @@ export default function Footer() {
                 <textarea 
                   placeholder={footerTranslations.messagePlaceholder[language]} 
                   rows={3}
-                  className="w-full p-2 sm:p-3 bg-gray-700 text-white border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 text-sm sm:text-base"
+                  className="w-full p-2 sm:p-3 bg-gray-700 text-white border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-300 text-sm sm:text-base"
                 ></textarea>
               </motion.div>
               <motion.button 
                 type="submit" 
-                className="bg-blue-600 text-white py-2 sm:py-3 px-4 sm:px-6 rounded-md hover:bg-blue-700 transition-all duration-300 text-sm sm:text-base"
+                className="bg-primary text-white py-2 sm:py-3 px-4 sm:px-6 rounded-md hover:bg-primary/90 transition-all duration-300 text-sm sm:text-base"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 1.1 }}

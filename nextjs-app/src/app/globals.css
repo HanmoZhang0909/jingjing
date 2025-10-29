@@ -5,8 +5,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --primary: #1a56db;
-  --secondary: #e53e3e;
+  --primary: #1e3a8a;
+  --secondary: #4b7eeb;
 }
 
 @theme inline {
@@ -52,7 +52,15 @@ body {
     @apply bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-full transition-colors;
   }
   
+  .btn-secondary {
+    @apply bg-secondary hover:bg-secondary/90 text-white px-6 py-2 rounded-full transition-colors;
+  }
+  
   .btn-outline {
     @apply border border-white text-white px-6 py-2 rounded-full hover:bg-white/10 transition-colors;
+  }
+  
+  .btn-outline-primary {
+    @apply border border-primary text-primary px-6 py-2 rounded-full hover:bg-primary/10 transition-colors;
   }
 }

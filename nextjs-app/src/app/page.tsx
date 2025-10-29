@@ -34,11 +34,11 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* 主页横幅 - 固定背景 */}
-      <div className="relative h-screen bg-gray-900 overflow-hidden">
+      <div className="relative h-screen bg-gray-400 overflow-hidden">
         {/* 背景加载动画层 */}
         {!imageLoaded && (
           <motion.div 
-            className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-800 to-gray-900"
+            className="absolute inset-0 bg-gradient-to-br from-primary via-primary/80 to-gray-900"
             initial={{ opacity: 1 }}
             animate={{ opacity: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
@@ -86,14 +86,14 @@ export default function Home() {
 
         {/* 背景图片加载完成后的淡入效果 */}
         <motion.div 
-          className="absolute inset-0 bg-gradient-to-r from-blue-900/70 via-blue-900/30 to-transparent"
+          className="absolute inset-0 bg-gradient-to-r from-primary/30 via-primary/10 to-transparent"
           initial={{ opacity: 0 }}
           animate={{ opacity: imageLoaded ? 1 : 0 }}
           transition={{ duration: 0.8, delay: imageLoaded ? 0.5 : 0 }}
         />
 
         {/* 渐变遮罩层 */}
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/70 via-blue-900/30 to-transparent z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/30 via-primary/10 to-transparent z-10"></div>
         
         {/* 内容层 */}
         <motion.div 
@@ -139,10 +139,10 @@ export default function Home() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.6 }}
                 >
-                  <Link href="/about" className="bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full transition-all duration-300 hover:scale-105 text-center text-base sm:text-lg font-medium">
+                  <Link href="/about" className="btn-primary px-6 sm:px-8 py-3 sm:py-4 transition-all duration-300 hover:scale-105 text-center text-base sm:text-lg font-medium">
                     {t('home.learnMore')}
                   </Link>
-                  <Link href="/contact" className="border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:bg-white/10 transition-all duration-300 hover:scale-105 text-center text-base sm:text-lg font-medium">
+                  <Link href="/contact" className="btn-outline px-6 sm:px-8 py-3 sm:py-4 transition-all duration-300 hover:scale-105 text-center text-base sm:text-lg font-medium">
                     {t('home.contactUs')}
                   </Link>
                 </motion.div>
@@ -228,12 +228,8 @@ export default function Home() {
 
       {/* 关于我们 */}
       <section className="relative py-8 sm:py-12 lg:py-16 bg-white overflow-hidden">
-        {/* 顶部渐变过渡层 - 从蓝色到白色 */}
-        <div className="absolute top-0 left-0 right-0 h-64 bg-gradient-to-b from-blue-900 to-white z-10"></div>
-        {/* 底部渐变过渡层 */}
-        <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-[#1e3a8a] to-transparent z-10"></div>
         
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
             <motion.div 
               className="w-full lg:w-1/2"
@@ -258,7 +254,7 @@ export default function Home() {
               viewport={{ once: true, margin: "-100px" }}
             >
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-2">{t('home.aboutUs')}</h2>
-              <p className="text-red-600 mb-4 sm:mb-6 text-sm sm:text-base">{t('home.companyProfileSubtitle')}</p>
+              <p className="text-secondary mb-4 sm:mb-6 text-sm sm:text-base">{t('home.companyProfileSubtitle')}</p>
               <p className="text-gray-700 mb-6 sm:mb-8 text-sm sm:text-base leading-relaxed">
                 {t('home.companyProfileDesc')}
               </p>
@@ -266,7 +262,7 @@ export default function Home() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Link href="/about" className="bg-blue-600 hover:bg-blue-700 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full inline-block transition-all duration-300 text-sm sm:text-base">
+                <Link href="/about" className="btn-primary px-4 sm:px-6 py-2 sm:py-3 transition-all duration-300 text-sm sm:text-base">
                   {t('home.viewMore')}
                 </Link>
               </motion.div>
@@ -276,12 +272,10 @@ export default function Home() {
       </section>
 
       {/* 主营业务 */}
-      <section className="h-screen flex items-center justify-center relative" style={{ backgroundColor: '#1e3a8a' }}>
-        {/* 顶部渐变过渡层 */}
-        <div className="absolute top-0 left-0 right-0 h-64 bg-gradient-to-b from-transparent to-[#1e3a8a] z-10"></div>
+      <section className="h-[80vh] flex items-center justify-center relative bg-primary/90">
         
         <motion.div
-          className="w-full h-full flex items-center justify-center relative z-20"
+          className="w-full h-full flex items-center justify-center relative"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
@@ -292,7 +286,7 @@ export default function Home() {
       </section>
 
       {/* 主营业务到最新资讯的过渡 */}
-      <div className="h-64 bg-gradient-to-b from-[#1e3a8a] to-white"></div>
+      <div className="h-64 bg-white"></div>
 
       {/* 最新资讯 */}
       <section className="py-8 sm:py-12 lg:py-16">
@@ -333,8 +327,8 @@ export default function Home() {
               >
                 <div className="p-4 sm:p-6">
                   <p className="text-gray-500 text-xs sm:text-sm mb-2">{news.date}</p>
-                  <h3 className="text-base sm:text-lg font-bold mb-3 hover:text-blue-600 transition-colors leading-tight">{news.title}</h3>
-                  <Link href={`/news/${index + 1}`} className="text-blue-600 hover:underline transition-colors text-sm sm:text-base">
+                  <h3 className="text-base sm:text-lg font-bold mb-3 hover:text-primary transition-colors leading-tight">{news.title}</h3>
+                  <Link href={`/news/${index + 1}`} className="text-primary hover:underline transition-colors text-sm sm:text-base">
                     {t('home.readMore')} →
                   </Link>
                 </div>
@@ -362,7 +356,7 @@ export default function Home() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-full inline-block transition-all duration-300 text-sm sm:text-base">
+              <Link href="/contact" className="btn-primary px-6 sm:px-8 py-2 sm:py-3 transition-all duration-300 text-sm sm:text-base">
                 {t('home.contactNow')}
               </Link>
             </motion.div>

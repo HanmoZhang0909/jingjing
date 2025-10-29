@@ -34,7 +34,7 @@ const AccordionSlider: React.FC = () => {
       title: t('business.anode'),
       subtitle: "",
       description: "",
-      image: "/独立站图片素材/Colorful_chemistry_lab_glassware_collection_1024x516.jpg",
+      image: "/独立站图片素材/Laboratory_setup_with_chemistry_papers_and_glassware_1024x683.jpg",
       link: "/products/anode",
       specs: [],
       badges: []
@@ -54,14 +54,14 @@ const AccordionSlider: React.FC = () => {
       title: t('business.equipment'),
       subtitle: "",
       description: "",
-      image: "/独立站图片素材/Colorful_chemistry_lab_glassware_collection_1024x516.jpg",
+      image: "/独立站图片素材/Gemini_Generated_Image_home_cover_1344x768.png",
       link: "/products/equipment",
       specs: [],
       badges: []
     }
   ];
 
-  const handleSlideClick = useCallback((index: number) => {
+  const handleSlideHover = useCallback((index: number) => {
     const slides = slidesRef.current;
     if (!slides.length) return;
 
@@ -111,25 +111,25 @@ const AccordionSlider: React.FC = () => {
         gsap.set(slide, { flex: 0.5 });
       }
 
-      // 点击事件
-      slide.addEventListener('click', () => handleSlideClick(index));
+      // 悬停事件
+      slide.addEventListener('mouseenter', () => handleSlideHover(index));
     });
 
     return () => {
       slides.forEach(slide => {
-        slide.removeEventListener('click', () => {});
+        slide.removeEventListener('mouseenter', () => {});
         gsap.killTweensOf(slide);
       });
     };
-  }, [handleSlideClick]);
+  }, [handleSlideHover]);
 
   return (
-    <div className="w-full h-full max-w-none">
-      <div className="text-center mb-8">
+    <div className="w-8/12 h-full mx-auto scale-80">
+      <div className="text-center mb-12 mt-12">
         <h2 className="text-4xl font-bold text-white">{t('home.mainBusiness')}</h2>
       </div>
 
-      <div ref={sliderRef} className="relative h-[80vh] overflow-hidden rounded-2xl shadow-2xl">
+      <div ref={sliderRef} className="relative h-[60vh] overflow-hidden rounded-2xl shadow-2xl">
         <div className="flex h-full">
           {businessData.map((business, index) => (
             <div
@@ -151,7 +151,7 @@ const AccordionSlider: React.FC = () => {
               {/* 内容区域 */}
               <div className="slide-content absolute bottom-8 left-8 right-8 text-white z-10">
                 {/* 标题 */}
-                <div className="business-title text-2xl font-bold transition-all duration-300 ease-out hover:text-blue-300 hover:scale-110 hover:drop-shadow-lg">
+                <div className="business-title text-2xl font-bold transition-all duration-300 ease-out hover:text-primary/70 hover:scale-110 hover:drop-shadow-lg">
                   {business.title}
                 </div>
                 

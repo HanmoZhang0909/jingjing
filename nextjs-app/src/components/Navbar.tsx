@@ -56,7 +56,7 @@ export default function Navbar() {
 
   if (!isMounted) {
     return (
-      <nav className="bg-blue-900 text-white">
+      <nav className="bg-primary text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center h-16">
             {/* 左侧区域 - Logo居中 */}
@@ -82,8 +82,8 @@ export default function Navbar() {
                     href={item.path}
                     className={`px-4 py-2 text-base font-medium transition-colors duration-300 rounded-md whitespace-nowrap ${
                       pathname === item.path
-                        ? 'text-white font-bold bg-blue-800/50'
-                        : 'text-gray-300 hover:text-white hover:bg-blue-800/30'
+                        ? 'text-white font-bold bg-primary/80'
+                        : 'text-gray-300 hover:text-white hover:bg-primary/30'
                     }`}
                   >
                     {t(item.nameKey)}
@@ -109,7 +109,7 @@ export default function Navbar() {
 
   return (
     <motion.nav 
-      className="bg-blue-900 text-white fixed top-0 left-0 right-0 z-50"
+      className="bg-primary text-white fixed top-0 left-0 right-0 z-50"
       initial={{ y: -100 }}
       animate={{ y: isVisible ? 0 : -100 }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
@@ -158,8 +158,8 @@ export default function Navbar() {
                     href={item.path}
                     className={`px-4 py-2 text-base font-medium transition-colors duration-300 rounded-md whitespace-nowrap ${
                       pathname === item.path
-                        ? 'text-white font-bold bg-blue-800/50'
-                        : 'text-gray-300 hover:text-white hover:bg-blue-800/30'
+                        ? 'text-white font-bold bg-primary/80'
+                        : 'text-gray-300 hover:text-white hover:bg-primary/30'
                     }`}
                   >
                     {t(item.nameKey)}
@@ -173,7 +173,7 @@ export default function Navbar() {
           <div className="flex-1 flex justify-end lg:hidden">
             <motion.button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-blue-800 focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-primary/30 focus:outline-none"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
@@ -239,8 +239,8 @@ export default function Navbar() {
                     href={item.path}
                     className={`block px-3 py-2 rounded-md text-lg font-medium transition-colors duration-300 ${
                       pathname === item.path
-                        ? 'bg-blue-800 text-white'
-                        : 'text-gray-300 hover:bg-blue-800 hover:text-white'
+                        ? 'bg-primary/80 text-white'
+                        : 'text-gray-300 hover:bg-primary/30 hover:text-white'
                     }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
