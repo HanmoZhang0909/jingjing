@@ -239,7 +239,7 @@ export default function Home() {
               viewport={{ once: true, margin: "-100px" }}
             >
               <Image 
-                src="/独立站图片素材/Company_Profile.webp" 
+                src="/独立站图片素材/homepageabout.jpg" 
                 alt="晶晶表面技术公司" 
                 width={500} 
                 height={400} 
