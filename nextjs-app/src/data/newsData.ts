@@ -21,14 +21,14 @@ export interface NewsArticle {
 export const newsArticles: NewsArticle[] = [
   {
     id: 1,
-    titleZh: 'DX-30微裂纹硬铬催化剂中间体技术突破，电流效率提升至60%',
-    titleEn: 'DX-30 Micro Crack Hard Chromium Catalyst Intermediate Technology Breakthrough, Current Efficiency Improved to 60%',
+    titleZh: 'DX-30微裂纹硬铬催化剂中间体技术突破，电流效率提升至25-28%',
+    titleEn: 'DX-30 Micro Crack Hard Chromium Catalyst Intermediate Technology Breakthrough, Current Efficiency Improved to 25-28%',
     summaryZh: '我司成功开发DX-30微裂纹硬铬催化剂中间体，电流效率提升25%-27%，沉积速度是传统技术的两倍。',
     summaryEn: 'Our company successfully developed DX-30 micro crack hard chromium catalyst intermediate, improving current efficiency by 25%-27%, with deposition speed twice that of traditional technology.',
     contentZh: `
       <p>近日，东莞晶晶新材料有限公司宣布成功开发DX-30微裂纹硬铬催化剂中间体（产品编号ST-930），在硬铬电镀技术领域取得重大突破。该产品是一种固体粉末中间体，可显著提高电流效率，减少镀液对阳极板的腐蚀。</p>
       
-      <p>DX-30技术具有多项突出优势：更高效的阴极电流（高达25%-27%），沉积速度快，是传统技术的两倍。在阴极电流密度70A/dm²，温度55-65℃条件下，电流效率高达60%。铬层硬度高，符合GB9790-88标准，硬度范围860-1200 HV，耐用性提高20%-30%。</p>
+      <p>DX-30技术具有多项突出优势：更高效的阴极电流（高达25%-27%），沉积速度快，是传统技术的两倍。在阴极电流密度70A/dm²，温度55-65℃条件下，电流效率高达25-28%。铬层硬度高，符合GB9790-88标准，硬度范围860-1200 HV，耐用性提高20%-30%。</p>
       
       <p>该产品使成品表面更光滑、更亮，增加涂层硬度，产生更多微裂纹，具有更高的耐腐蚀性。铬层与基体结合更牢固，预处理操作更简单。铬溶液分散性更好，层厚更均匀，表面更光滑，几乎无滚痕。铬溶液不含氟化物，可防止电镀过程中因低电流对工件的腐蚀。</p>
       
@@ -37,7 +37,7 @@ export const newsArticles: NewsArticle[] = [
     contentEn: `
       <p>Recently, Dongguan Jingjing Surface Technology Co., Ltd. announced the successful development of DX-30 micro crack hard chromium catalyst intermediate (Product No. ST-930), achieving a major breakthrough in hard chromium electroplating technology. This product is a solid powder intermediate that can significantly improve current efficiency and reduce corrosion of the plating solution on the anode plate.</p>
       
-      <p>DX-30 technology has multiple outstanding advantages: more efficient cathode current (up to 25%-27%), fast deposition speed, twice that of traditional technology. Under cathode current density 70A/dm², temperature 55-65℃, current efficiency as high as 60%. High hardness chromium layer, meets GB9790-88 standard, hardness range 860-1200 HV, durability increased by 20%-30%.</p>
+      <p>DX-30 technology has multiple outstanding advantages: more efficient cathode current (up to 25%-27%), fast deposition speed, twice that of traditional technology. Under cathode current density 70A/dm², temperature 55-65℃, current efficiency as high as 25-28%. High hardness chromium layer, meets GB9790-88 standard, hardness range 860-1200 HV, durability increased by 20%-30%.</p>
       
       <p>This product makes the surface of the finished product smoother and brighter, increases the hardness of the coating, generates more microcracks, and has higher corrosion resistance. The chromium layer bonds more firmly to the substrate, and the pre-treatment operation is simpler. The chromium solution has better dispersibility, more uniform layer thickness, and a smoother surface with almost no rolling.</p>
       

@@ -88,8 +88,8 @@ const translations: Record<string, Record<Language, string>> = {
     en: 'Email',
   },
   'contact.email.sales': {
-    zh: 'jingjing@gmail.com',
-    en: 'jingjing@gmail.com',
+    zh: 'jingjinggddg@gmail.com',
+    en: 'jingjinggddg@gmail.com',
   },
   'contact.email.support': {
     zh: '联系人',
@@ -394,8 +394,8 @@ const translations: Record<string, Record<Language, string>> = {
     en: 'Latest News',
   },
   'home.news1': {
-    zh: 'DX-30微裂纹硬铬催化剂中间体技术突破，电流效率提升至60%',
-    en: 'DX-30 Micro Crack Hard Chromium Catalyst Intermediate Technology Breakthrough, Current Efficiency Improved to 60%',
+    zh: 'DX-30微裂纹硬铬催化剂中间体技术突破，电流效率提升至25-28%',
+    en: 'DX-30 Micro Crack Hard Chromium Catalyst Intermediate Technology Breakthrough, Current Efficiency Improved to 25-28%',
   },
   'home.news2': {
     zh: 'FC-T高密度挤压合金阳极成功量产，使用寿命延长至5年',
@@ -430,8 +430,8 @@ const translations: Record<string, Record<Language, string>> = {
     en: 'About Us',
   },
   'business.anode': {
-    zh: '阳极氧化',
-    en: 'Anode Oxidation',
+    zh: '镀铬阳极',
+    en: 'Chrome Plating Anode',
   },
   'business.chemical': {
     zh: '化学药水',

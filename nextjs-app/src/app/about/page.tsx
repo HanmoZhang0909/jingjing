@@ -73,8 +73,8 @@ export default function AboutPage() {
         },
         {
           year: '2024',
-          eventZh: '产品技术持续优化，DX-30电流效率提升至60%，FC-T阳极使用寿命延长至5年',
-          eventEn: 'Continuous product technology optimization, DX-30 current efficiency improved to 60%, FC-T anode service life extended to 5 years'
+          eventZh: '产品技术持续优化，DX-30电流效率提升至25-28%，FC-T阳极使用寿命延长至5年',
+          eventEn: 'Continuous product technology optimization, DX-30 current efficiency improved to 25-28%, FC-T anode service life extended to 5 years'
         }
       ]
     },

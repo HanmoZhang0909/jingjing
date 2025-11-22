@@ -52,8 +52,8 @@ export default function EquipmentPage() {
               <h2 className="text-3xl font-bold text-gray-800 mb-6">设备系列</h2>
               <div className="space-y-6">
                 <div className="border-l-4 border-purple-500 pl-4">
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">阳极氧化生产线</h3>
-                  <p className="text-gray-600">全自动阳极氧化处理生产线，提高处理效率</p>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">镀铬阳极生产线</h3>
+                  <p className="text-gray-600">全自动镀铬阳极处理生产线，提高处理效率</p>
                 </div>
                 <div className="border-l-4 border-blue-500 pl-4">
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">清洗设备</h3>
@@ -128,7 +128,7 @@ export default function EquipmentPage() {
             <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">技术参数</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-4">阳极氧化生产线</h3>
+                <h3 className="text-xl font-semibold text-gray-800 mb-4">镀铬阳极生产线</h3>
                 <div className="space-y-3">
                   <div className="flex justify-between py-2 border-b border-gray-200">
                     <span className="font-medium text-gray-700">处理能力</span>

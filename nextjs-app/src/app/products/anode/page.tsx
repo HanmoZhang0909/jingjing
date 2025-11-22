@@ -35,9 +35,9 @@ export default function AnodePage() {
         >
           {/* 页面标题 */}
           <div className="text-center mb-12">
-            <h1 className="text-5xl font-bold text-gray-800 mb-4">阳极氧化处理</h1>
+            <h1 className="text-5xl font-bold text-gray-800 mb-4">镀铬阳极处理</h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              专业阳极氧化处理技术，提供高质量的表面处理解决方案，提升产品耐腐蚀性和美观度
+              专业镀铬阳极处理技术，提供高质量的表面处理解决方案，提升产品耐腐蚀性和美观度
             </p>
           </div>
 
@@ -56,7 +56,7 @@ export default function AnodePage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-800">高耐腐蚀性</h3>
-                    <p className="text-gray-600">通过阳极氧化处理，产品表面形成致密的氧化膜，显著提升耐腐蚀性能</p>
+                    <p className="text-gray-600">通过镀铬阳极处理，产品表面形成致密的氧化膜，显著提升耐腐蚀性能</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -154,7 +154,7 @@ export default function AnodePage() {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="text-center bg-blue-600 text-white rounded-lg p-8"
           >
-            <h2 className="text-3xl font-bold mb-4">需要阳极氧化处理服务？</h2>
+            <h2 className="text-3xl font-bold mb-4">需要镀铬阳极处理服务？</h2>
             <p className="text-xl mb-6">联系我们获取专业的技术咨询和定制化解决方案</p>
             <Link 
               href="/contact" 

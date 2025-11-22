@@ -132,7 +132,7 @@ export default function Navbar() {
                   transition={{ duration: 0.3, ease: "easeOut" }}
                 >
                   <Image 
-                    src="/独立站图片素材/jingjing_logo_blue.jpg" 
+                    src="/独立站图片素材/Red_and_white_logo_with_stylized_letter_N_200x157.png" 
                     alt="晶晶表面技术Logo" 
                     width={200}
                     height={157}

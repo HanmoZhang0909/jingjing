@@ -11,8 +11,8 @@ export default function Footer() {
   const newsItems = [
     {
       id: 1,
-      titleZh: 'DX-30微裂纹硬铬催化剂中间体技术突破，电流效率提升至60%',
-      titleEn: 'DX-30 Micro Crack Hard Chromium Catalyst Intermediate Technology Breakthrough, Current Efficiency Improved to 60%',
+      titleZh: 'DX-30微裂纹硬铬催化剂中间体技术突破，电流效率提升至25-28%',
+      titleEn: 'DX-30 Micro Crack Hard Chromium Catalyst Intermediate Technology Breakthrough, Current Efficiency Improved to 25-28%',
       date: '2025-10-15',
       slug: 'dx30-technology-breakthrough'
     },
@@ -149,7 +149,7 @@ export default function Footer() {
                 { label: footerTranslations.companyAddress[language], value: footerTranslations.addressValue[language] },
                 { label: footerTranslations.contactPerson[language], value: footerTranslations.contactPersonValue[language] },
                 { label: footerTranslations.phone[language], value: "13790181730" },
-                { label: footerTranslations.email[language], value: "jingjing@gmail.com" }
+                { label: footerTranslations.email[language], value: "jingjinggddg@gmail.com" }
               ].map((item, index) => (
                 <motion.li 
                   key={index}

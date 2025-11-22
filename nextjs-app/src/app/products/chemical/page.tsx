@@ -52,8 +52,8 @@ export default function ChemicalPage() {
               <h2 className="text-3xl font-bold text-gray-800 mb-6">产品系列</h2>
               <div className="space-y-6">
                 <div className="border-l-4 border-green-500 pl-4">
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">阳极氧化药水</h3>
-                  <p className="text-gray-600">专业阳极氧化处理药水，提供稳定的氧化效果</p>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">镀铬阳极药水</h3>
+                  <p className="text-gray-600">专业镀铬阳极处理药水，提供稳定的氧化效果</p>
                 </div>
                 <div className="border-l-4 border-blue-500 pl-4">
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">表面清洁剂</h3>
@@ -128,7 +128,7 @@ export default function ChemicalPage() {
             <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">技术参数</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-4">阳极氧化药水</h3>
+                <h3 className="text-xl font-semibold text-gray-800 mb-4">镀铬阳极药水</h3>
                 <div className="space-y-3">
                   <div className="flex justify-between py-2 border-b border-gray-200">
                     <span className="font-medium text-gray-700">浓度</span>
