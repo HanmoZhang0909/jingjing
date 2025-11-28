@@ -44,7 +44,7 @@ const AccordionSlider: React.FC = () => {
       title: t('business.chemical'),
       subtitle: "",
       description: "",
-      image: "/独立站图片素材/Colorful_chemistry_lab_glassware_collection_1024x516.jpg",
+      image: "/独立站图片素材/4.png",
       link: "/products/chemical",
       specs: [],
       badges: []

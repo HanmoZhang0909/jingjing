@@ -434,8 +434,8 @@ const translations: Record<string, Record<Language, string>> = {
     en: 'Chrome Plating Anode',
   },
   'business.chemical': {
-    zh: '化学药水',
-    en: 'Chemical Solutions',
+    zh: '镀铬添加剂（中间体）',
+    en: 'Chrome Plating Additive (Intermediate)',
   },
   'business.equipment': {
     zh: '处理设备',

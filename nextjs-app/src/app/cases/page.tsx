@@ -36,51 +36,45 @@ export default function CasesPage() {
           en: 'Automotive Industry'
         },
         description: {
-          zh: '汽车零部件、发动机部件、制动系统等需要高硬度和耐腐蚀性的镀铬处理。',
-          en: 'Automotive parts, engine components, brake systems and other components requiring high hardness and corrosion resistance chrome plating.'
+          zh: '汽车零部件、发动机部件、车身装饰件等需要高硬度和耐腐蚀性的镀铬处理。',
+          en: 'Automotive parts, engine components, body decoration parts and other components requiring high hardness and corrosion resistance chrome plating.'
         },
         applications: {
           zh: [
-            '发动机缸体镀铬',
-            '制动盘表面处理',
-            '传动轴镀铬',
-            '减震器活塞杆',
-            '转向系统部件'
+            '发动机气门',
+            '减震器杆',
+            '活塞环',
           ],
           en: [
-            'Engine block chrome plating',
-            'Brake disc surface treatment',
-            'Drive shaft chrome plating',
-            'Shock absorber piston rod',
-            'Steering system components'
+            'Engine valve',
+            'Shock absorber rod',
+            'Piston ring',
           ]
         },
         image: '/独立站图片素材/应用场景/Chrome_faucet_with_hotcold_indicators_1600x1920.jpg'
       },
       {
-        id: 'electronics',
+        id: 'bathroom',
         name: {
-          zh: '电子电器',
-          en: 'Electronics & Electrical'
+          zh: '卫浴家具',
+          en: 'Bathroom Furniture'
         },
         description: {
-          zh: '电子设备外壳、连接器、开关等需要良好的导电性和耐腐蚀性。',
-          en: 'Electronic device housings, connectors, switches and other components requiring good conductivity and corrosion resistance.'
+          zh: '卫浴家具、工具等外观装饰件。',
+          en: 'Bathroom furniture, tools and other appearance decoration parts.'
         },
         applications: {
           zh: [
-            '手机外壳镀铬',
-            '电脑连接器',
-            '开关触点处理',
-            'LED散热器',
-            '电路板连接器'
+            '花洒，龙头',
+            '家具，厨具',
+            '门把手',
+            '卫浴配件'
           ],
           en: [
-            'Mobile phone housing chrome plating',
-            'Computer connectors',
-            'Switch contact treatment',
-            'LED heat sinks',
-            'PCB connectors'
+            'Shower head, faucet',
+            'Furniture, kitchen utensils',
+            'Door handle',
+            'Bathroom accessories'
           ]
         },
         image: '/独立站图片素材/应用场景/Colorful_chemistry_lab_glassware_and_liquids_1024x516.jpg'
@@ -172,27 +166,27 @@ export default function CasesPage() {
       {
         id: 'home-appliances',
         name: {
-          zh: '家电行业',
-          en: 'Home Appliances'
+          zh: '装饰性面板',
+          en: 'Decorative Panel'
         },
         description: {
-          zh: '家电产品需要美观、耐用的表面处理，提升产品品质和用户体验。',
-          en: 'Home appliances require beautiful and durable surface treatment to improve product quality and user experience.'
+          zh: '装修用产品需要美观、耐用的表面处理，提升产品品质和用户体验。',
+          en: 'Decorative panels require beautiful and durable surface treatment to improve product quality and user experience.'
         },
         applications: {
           zh: [
-            '洗衣机内筒镀铬',
-            '冰箱门把手',
-            '空调外壳处理',
-            '热水器内胆',
-            '厨房电器表面'
+            '装修用面板',
+            '不锈钢类产品',
+            '铝塑板',
+            '铝类产品',
+            '锌类产品'
           ],
           en: [
-            'Washing machine drum chrome plating',
-            'Refrigerator door handles',
-            'Air conditioner housing treatment',
-            'Water heater inner tank',
-            'Kitchen appliance surface'
+            'TV background wall',
+            'Stainless steel products',
+            'Aluminum plastic panel',
+            'Aluminum alloy product',
+            'Zinc alloy product'
           ]
         },
         image: '/独立站图片素材/应用场景/Polished_metal_cylinder_industrial_equipment_799x387.jpg'

@@ -40,11 +40,11 @@ export default function ProductsPage() {
               transition={{ duration: 0.6, delay: 0.1 }}
             >
               <div className="h-48 bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center">
-                <div className="text-white text-2xl font-bold">镀铬阳极</div>
+                <div className="text-white text-2xl font-bold">镀铬用阳极</div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-3">镀铬阳极处理</h3>
-                <p className="text-gray-600 mb-4">专业镀铬阳极处理技术，提供高质量的表面处理解决方案。</p>
+                <h3 className="text-xl font-bold mb-3">镀铬用阳极（挤压成型）</h3>
+                <p className="text-gray-600 mb-4">专业技术，提供高质量的表面处理解决方案。</p>
                 <Link 
                   href="/products/anode" 
                   className="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors"
@@ -63,11 +63,11 @@ export default function ProductsPage() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <div className="h-48 bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center">
-                <div className="text-white text-2xl font-bold">化学药水</div>
+                <div className="text-white text-2xl font-bold">化学助剂</div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-3">化学药水产品</h3>
-                <p className="text-gray-600 mb-4">优质化学药水产品，为金属表面处理提供专业的化学支持。</p>
+                <h3 className="text-xl font-bold mb-3">镀铬添加剂</h3>
+                <p className="text-gray-600 mb-4">优质添加剂，为金属表面处理提供专业的化学支持。</p>
                 <Link 
                   href="/products/chemical" 
                   className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-colors"
@@ -86,11 +86,11 @@ export default function ProductsPage() {
               transition={{ duration: 0.6, delay: 0.3 }}
             >
               <div className="h-48 bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center">
-                <div className="text-white text-2xl font-bold">处理设备</div>
+                <div className="text-white text-2xl font-bold">表面处理设备</div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-3">表面处理设备</h3>
-                <p className="text-gray-600 mb-4">先进表面处理设备，自动化生产线，提高生产效率。</p>
+                <h3 className="text-xl font-bold mb-3">镀铬设备以及产线</h3>
+                <p className="text-gray-600 mb-4">先进设备，自动化生产线，提高生产效率。</p>
                 <Link 
                   href="/products/equipment" 
                   className="inline-block bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition-colors"
